@@ -5,8 +5,8 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                    <a href="{{ route('dashboard') }}" class="text-theme-color text-lg font-semibold uppercase">
+                       Madjed Analytics
                     </a>
                 </div>
 

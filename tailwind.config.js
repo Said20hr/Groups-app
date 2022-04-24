@@ -42,7 +42,6 @@ module.exports = {
             inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
             none: "none"
         },
-
         extend: {
             colors: {
                 white: "#ffffff",
@@ -57,7 +56,16 @@ module.exports = {
                 "blueGray-600": "#475569",
                 "blueGray-700": "#334155",
                 "blueGray-800": "#1e293b",
-                "blueGray-900": "#0f172a"
+                "blueGray-900": "#0f172a",
+                'theme-color': '#361CC1',
+                'theme-color-2': '#FE7A7B'
+            },
+
+            inset: {
+                '100': '100%',
+            },
+            padding: {
+                '120': '120px',
             },
         }
     },

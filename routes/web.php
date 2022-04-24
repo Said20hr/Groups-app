@@ -26,3 +26,12 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::group([
+    //'middleware' =>(['auth:sanctum']),
+    'prefix' => 'admin',
+    'as' =>'admin'
+],
+    function (){
+    Route::view('/','admin.dashboard.default');
+});
