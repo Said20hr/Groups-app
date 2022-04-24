@@ -29,12 +29,13 @@
     <!-- CSS Files -->
     <link id="pagestyle" href="{{asset('dashboard/assets/css/argon-dashboard.css?v=2.0.0')}}" rel="stylesheet" />
     <!--====== Line Icons CSS ======-->
-    <!-- Styles -->
-
-    <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
+
+
+
 <body class="g-sidenav-show bg-gray-100">
+
 <x-includes.admin.navs.sidebar/>
 
 <main class="main-content position-relative border-radius-lg ">
@@ -43,7 +44,11 @@
     {{ $slot }}
 </main>
 
+
+
 @stack('js')
+
+
 <!--====== Jquery js ======-->
 <script src="{{asset('dashboard/assets/js/core/popper.min.js')}}"></script>
 <script src="{{asset('dashboard/assets/js/core/bootstrap.min.js')}}"></script>
