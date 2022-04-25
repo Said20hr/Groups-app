@@ -114,7 +114,10 @@ p {
     background: linear-gradient(#fe8464 0%, #fe6e9a 100%);
     @apply w-40 h-1 mb-3;
 }
-
+.navbar-vertical .navbar-nav>.nav-item .nav-link.active
+{
+    background-color: rgba(54, 126, 240, 0.13) !important;
+}
 .section-title .title {
     font-size: 32px;
 

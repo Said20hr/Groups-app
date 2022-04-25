@@ -1,6 +1,5 @@
 <x-guest-layout>
     <header class="header-area">
-        <x-includes.guest.header/>
         <div id="home" class="header-hero" style="background-image: url({{asset('assets/images/banner-bg.svg')}})">
             <div class="container">
                 <div class="justify-center row">

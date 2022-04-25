@@ -32,10 +32,15 @@
                                 </li>
                             </ul>
                         </div> <!-- navbar collapse -->
-
-                        <div class="absolute right-0 hidden mt-2 mr-24 navbar-btn sm:inline-block lg:mt-0 lg:static lg:mr-0">
-                            <a class="main-btn gradient-btn" data-scroll-nav="0" href="{{route('register')}}" rel="nofollow">Join Now</a>
-                        </div>
+                        @guest
+                            <div class="absolute right-0 hidden mt-2 mr-24 navbar-btn sm:inline-block lg:mt-0 lg:static lg:mr-0">
+                                <a class="main-btn gradient-btn" data-scroll-nav="0" href="{{route('register')}}" rel="nofollow">Join Now</a>
+                            </div>
+                        @else
+                            <div class="absolute right-0 hidden mt-2 mr-24 navbar-btn sm:inline-block lg:mt-0 lg:static lg:mr-0">
+                                <a class="main-btn gradient-btn-2" data-scroll-nav="0" href="{{route('dashboard')}}" rel="nofollow">My account</a>
+                            </div>
+                        @endguest
                     </nav> <!-- navbar -->
                 </div>
             </div> <!-- row -->

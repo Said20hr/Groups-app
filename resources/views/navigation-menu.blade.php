@@ -5,8 +5,8 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}" class="text-theme-color text-lg font-semibold uppercase">
-                       Madjed Analytics
+                    <a href="{{ route('dashboard') }}" class="flex items-center">
+                        <div class="text-theme-color text-lg font-semibold uppercase ">Madjed Analytics</div>
                     </a>
                 </div>
 

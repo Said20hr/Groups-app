@@ -31109,7 +31109,7 @@ A VERTICAL event
 
 .fc-timegrid-event-condensed .fc-event-time:after {
   content: '\00a0-\00a0';
-  /* dash surrounded by non-breaking spaces */
+  /* dashboard surrounded by non-breaking spaces */
 }
 
 .fc-timegrid-event-condensed .fc-event-title {
