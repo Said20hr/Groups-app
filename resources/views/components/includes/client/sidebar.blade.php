@@ -1,10 +1,21 @@
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 fixed-start" id="sidenav-main">
-    <div class="sidenav-header">
+    <div class="">
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-        <a class="flex items-center justify-center py-4" href="#">
-            <img src="{{asset('assets/images/MAJEDB.svg')}}" class="navbar-brand-img h-100 mr-2" alt="main_logo">
-            <span class="font-weight-bold text-uppercase ">Majed Analytics</span>
-        </a>
+        <div class="flex items-center pl-4 py-4">
+            @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+                <div class="shrink-0 mr-3">
+                    <img class="h-12 w-12 rounded-full object-cover border border-gray-200"
+                         src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
+                </div>
+            @endif
+            <div>
+                <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
+                <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+            </div>
+                <div class="bg-indigo-200 hover:bg-indigo-400 text-gray-100 hover:text-white d-flex justify-content-center items-center ml-4 rounded-lg">
+                    <i class="ni ni-settings-gear-65 cursor-pointer p-1" aria-hidden="true"></i>
+                </div>
+        </div>
     </div>
     <hr class="horizontal dark mt-0">
     <div class="collapse navbar-collapse w-auto h-auto h-100" id="sidenav-collapse-main">
@@ -19,8 +30,16 @@
             </li>
             <li class="nav-item mb-2">
                 <a href="#authExamples" class="nav-link ">
+                    <div class="icon icon-shape icon-sm text-center bg-primary d-flex align-items-center justify-content-center">
+                        <i class="ni ni-chart-bar-32 text-white text-sm opacity-10"></i>
+                    </div>
+                    <span class="nav-link-text ms-2">Statistics</span>
+                </a>
+            </li>
+            <li class="nav-item mb-2">
+                <a href="#authExamples" class="nav-link ">
                     <div class="icon icon-shape icon-sm bg-danger d-flex align-items-center justify-content-center">
-                        <i class="ni ni-single-copy-04 text-white text-sm opacity-10"></i>
+                        <i class="ni ni-circle-08 text-white text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-2">My Profile</span>
                 </a>
@@ -28,15 +47,15 @@
             <li class="nav-item mb-2">
                 <a href="#applicationsExamples" class="nav-link " >
                     <div class="icon icon-shape icon-sm bg-info text-center d-flex align-items-center justify-content-center">
-                        <i class="ni ni-ui-04 text-white text-sm opacity-10"></i>
+                        <i class="ni ni-books text-white text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-2">All Groups</span>
                 </a>
             </li>
             <li class="nav-item mb-2">
                 <a data-bs-toggle="collapse" href="#pagesExamples" class="nav-link " aria-controls="pagesExamples" role="button" aria-expanded="false">
-                    <div class="icon icon-shape icon-sm bg-warning text-center d-flex align-items-center justify-content-center">
-                        <i class="ni ni-ungroup text-white text-sm opacity-10"></i>
+                    <div class="icon icon-shape icon-sm bg-info text-center d-flex align-items-center justify-content-center">
+                        <i class="ni ni-book-bookmark text-white text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-2">My groups</span>
                 </a>
@@ -61,7 +80,7 @@
             <li class="nav-item mb-2">
                 <a data-bs-toggle="collapse" href="#ecommerceExamples" class="nav-link " aria-controls="ecommerceExamples" role="button" aria-expanded="false">
                     <div class="icon icon-shape icon-sm text-center bg-success d-flex align-items-center justify-content-center">
-                        <i class="ni ni-archive-2 text-white text-sm opacity-10"></i>
+                        <i class="ni ni-money-coins text-white text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-2">Payments</span>
                 </a>
@@ -90,16 +109,8 @@
             </li>
             <li class="nav-item mb-2">
                 <a href="#authExamples" class="nav-link ">
-                    <div class="icon icon-shape icon-sm text-center bg-danger d-flex align-items-center justify-content-center">
-                        <i class="ni ni-single-copy-04 text-white text-sm opacity-10"></i>
-                    </div>
-                    <span class="nav-link-text ms-2">Statistics</span>
-                </a>
-            </li>
-            <li class="nav-item mb-2">
-                <a href="#authExamples" class="nav-link ">
-                    <div class="icon icon-shape icon-sm text-center bg-danger d-flex align-items-center justify-content-center">
-                        <i class="ni ni-single-copy-04 text-white text-sm opacity-10"></i>
+                    <div class="icon icon-shape icon-sm text-center bg-yellow-300 d-flex align-items-center justify-content-center">
+                        <i class="ni ni-air-baloon text-white text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-2">Help</span>
                 </a>

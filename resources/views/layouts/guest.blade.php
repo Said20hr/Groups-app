@@ -31,14 +31,52 @@
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">
+            <x-includes.guest.header/>
             <x-includes.preloader/>
             {{ $slot }}
         </div>
 
-
         <!--====== Jquery js ======-->
         <script src="assets/js/vendor/jquery-3.5.1-min.js"></script>
         <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
+
+        <script>
+            var ddData = [
+                {
+                    text: "العربية",
+                    value: 1,
+                    selected: true,
+                    imageSrc: "https://flagcdn.com/16x12/sa.png"
+                },
+                {
+                    text: "English",
+                    value: 2,
+                    selected: false,
+                    imageSrc: "https://flagcdn.com/16x12/gb.png"
+                },
+                {
+                    text: "French",
+                    value: 3,
+                    selected: false,
+                    imageSrc: "https://flagcdn.com/16x12/fr.png"
+                },
+                {
+                    text: "deutsch",
+                    value: 4,
+                    selected: false,
+                    imageSrc: "https://flagcdn.com/16x12/de.png"
+                }
+            ];
+            $('#myDropdown').ddslick({
+                data:ddData,
+                width:150,
+                imagePosition:"right",
+                onSelected: function(selectedData){
+                    //callback function: do something with selectedData;
+                }
+            });
+        </script>
         <!--====== Plugins js ======-->
         <script src="assets/js/plugins.js"></script>
         <!--===== Slick js ======-->

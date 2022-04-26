@@ -22222,8 +22222,9 @@ hr.horizontal.gray-light {
   top: 0;
   bottom: 0;
   width: 100%;
-  max-width: 15.625rem !important;
+  max-width: 17.125rem !important;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 0;
   box-shadow: none;
   z-index: 9999;

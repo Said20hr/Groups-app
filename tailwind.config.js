@@ -15,7 +15,6 @@ module.exports = {
     theme: {
         colors: {
             ...colors,
-
         },
         screens: {
             sm: "640px",

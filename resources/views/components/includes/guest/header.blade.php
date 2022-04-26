@@ -30,6 +30,10 @@
                                 <li class="nav-item">
                                     <a class="page-scroll" href="#blog">Blog</a>
                                 </li>
+                                <li class="nav-item float-end w-100">
+                                    <div id="myDropdown"></div>
+                                </li>
+
                             </ul>
                         </div> <!-- navbar collapse -->
                         @guest

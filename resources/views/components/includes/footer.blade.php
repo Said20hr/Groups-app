@@ -3,20 +3,19 @@
 <footer id="footer" class="relative z-10 footer-area pt-120">
     <div class="footer-bg" style="background-image: url({{asset('assets/images/footer-bg.svg')}});"></div>
     <div class="container">
-        <div class="px-6 pt-10 pb-20 mb-12 bg-white rounded-lg shadow-xl md:px-12 subscribe-area wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-            <div class="row">
+        <div class="w-10/12 mx-auto px-6 pt-10 pb-20 mb-12 bg-white rounded-lg shadow-xl md:px-12 subscribe-area border wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="flex justify-between items-center">
                 <div class="w-full lg:w-1/2">
                     <div class="lg:mt-12 subscribe-content">
-                        <h2 class="text-xl font-bold sm:text-4xl subscribe-title">
+                        <h3 class="text-xl font-medium lg:text-3xl subscribe-title">
                             Subscribe Our Newsletter
-                            <span class="block font-normal mt-4">get reguler updates</span>
-                        </h2>
+                        </h3>
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2">
                     <div class="mt-12 subscribe-form">
                         <form action="#" class="relative focus:outline-none">
-                            <input type="email" placeholder="Enter eamil" class="w-full py-4 pl-6 pr-40 duration-300 border-2 rounded focus:border-theme-color focus:outline-none">
+                            <input type="email" placeholder="Enter eamil" class="w-full py-4 pl-6 pr-40 duration-300 border border-gray-300 rounded focus:border-theme-color focus:outline-none">
                             <button class="main-btn gradient-btn">Subscribe</button>
                         </form>
                     </div>
@@ -88,8 +87,8 @@
         </div> <!-- footer widget -->
         <div class="py-8 border-t border-gray-200 footer-copyright">
             <p class="text-white">
-                Template by <a class="duration-300 hover:text-theme-color-2" href="https://tailwindtemplates.co" rel="nofollow" target="_blank">TailwindTemplates</a> and
-                <a class="duration-300 hover:text-theme-color-2" href="https://uideck.com" rel="nofollow" target="_blank">UIdeck</a>
+                Created by <a class="duration-300 hover:text-theme-color-2" href="https://tailwindtemplates.co" rel="nofollow" target="_blank">Majed Mubarek</a> and
+                <a class="duration-300 hover:text-theme-color-2" href="https://ruya.studio" rel="nofollow" target="_blank">Said HADJ RAMDANE</a>
             </p>
         </div> <!-- footer copyright -->
     </div> <!-- container -->
