@@ -42,9 +42,7 @@
 
 <x-includes.client.sidebar/>
 
-<main class="main-content position-relative border-radius-lg ">
-    <div class="min-height-300 bg-primary position-absolute w-100"></div>
-    <x-includes.admin.navs.navbar/>
+<main class="main-content position-relative border-radius-xl bg-white ">
     {{ $slot }}
 </main>
 

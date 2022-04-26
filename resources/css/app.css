@@ -3,17 +3,17 @@
 @import 'tailwindcss/utilities';
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700|Lato:300,400,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif !important;
 }
 h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins','Cairo', sans-serif;
 }
 p {
     font-size: 16px;
@@ -306,4 +306,43 @@ p {
 }
 .back-to-top:hover {
     @apply bg-right;
+}
+.dd-container,.dd-select
+{
+    background-color: transparent !important;
+    border: none !important;
+}
+.dd-selected-image, .dd-option-image.dd-image-right
+{
+    padding: 0 10px;
+}
+
+.dd-options.dd-click-off-close
+{
+    margin-top: 2px;
+    cursor: pointer !important;
+}
+.dd-options.dd-click-off-close li a
+{
+    width: 100% !important;
+    color: #0b0b0b !important;
+    max-height: 45px;
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.dd-selected
+{
+    background-color: transparent !important;
+    max-height: 45px;
+    border-radius: 5px;
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.dd-pointer
+{
+    display: none;
 }
