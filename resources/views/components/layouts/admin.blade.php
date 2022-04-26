@@ -17,10 +17,10 @@
 
 
     <!--====== Slick CSS ======-->
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
+    <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/LineIcons.2.0.css')}}">
     <link href="{{asset('dashboard/assets/css/nucleo-icons.css')}}" rel="stylesheet" />
     <link href="{{asset('dashboard/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
     <!-- Font Awesome Icons -->
@@ -28,18 +28,18 @@
     <link href="{{asset('dashboard/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="{{asset('dashboard/assets/css/argon-dashboard.css?v=2.0.0')}}" rel="stylesheet" />
-    <!--====== Line Icons CSS ======-->
+    <!-- Styles -->
+
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 
 
 
 <body class="g-sidenav-show bg-gray-100">
-
+    <div class="min-height-300 bg-dark position-absolute w-100"></div>
 <x-includes.admin.navs.sidebar/>
 
 <main class="main-content position-relative border-radius-lg ">
-    <div class="min-height-300 bg-primary position-absolute w-100"></div>
     <x-includes.admin.navs.navbar/>
     {{ $slot }}
 </main>
@@ -60,7 +60,8 @@
 <!--====== Main js ======-->
 <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="{{asset('dashboard/assets/js/argon-dashboard.min.js?v=2.0.0')}}"></script>
-
-
+<!-- Kanban scripts -->
+<script src="{{asset('dashboard/assets/js/plugins/dragula/dragula.min.js')}}"></script>
+<script src="{{asset('dashboard/assets/js/plugins/jkanban/jkanban.js')}}"></script>
 </body>
 </html>

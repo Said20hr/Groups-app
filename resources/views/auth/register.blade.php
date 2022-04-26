@@ -2,11 +2,11 @@
     <x-jet-authentication-card>
         <div class="card z-index-0">
             <div class="card-header text-center pt-4">
-                <h5>Register with</h5>
+                <h5 class="text-2xl font-medium">Register with</h5>
             </div>
-            <div class="flex justify-center">
-                <div class="w-1/4 mx-2 px-1">
-                    <a class="btn btn-outline-light w-100" href="javascript:;">
+            <div class="container flex justify-center items-center">
+                <div class="w-1/6 mx-3 px-1">
+                    <a class="btn btn-outline-light " href="javascript:;">
                         <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <g transform="translate(3.000000, 3.000000)" fill-rule="nonzero">
@@ -17,8 +17,8 @@
                         </svg>
                     </a>
                 </div>
-                <div class="w-1/4 mx-2 px-1">
-                    <a class="btn btn-outline-light w-100" href="javascript:;">
+                <div class="w-1/6 mx-3 px-1">
+                    <a class="btn btn-outline-light" href="javascript:;">
                         <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <g transform="translate(7.000000, 0.564551)" fill="#000000" fill-rule="nonzero">
@@ -28,8 +28,8 @@
                         </svg>
                     </a>
                 </div>
-                <div class="w-1/4 mx-2 px-1">
-                    <a class="btn btn-outline-light w-100" href="javascript:;">
+                <div class="w-1/6 mx-3 px-1">
+                    <a class="btn btn-outline-light" href="javascript:;">
                         <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <g transform="translate(3.000000, 2.000000)" fill-rule="nonzero">

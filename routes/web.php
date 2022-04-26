@@ -24,12 +24,19 @@ Route::middleware(
         return view('client.dashboard');
     })->name('dashboard');
 });
-
-Route::group([
-    //'middleware' =>(['auth:sanctum']),
-    'prefix' => 'admin',
-    'as' =>'admin'
-],
-    function (){
-    Route::view('/','admin.dashboard.default');
-});
+Route::group(
+    [
+        // 'middleware' => ['role:admin'],
+        'prefix' => 'admin',
+        'as' => 'admin.',
+    ],
+    function () {
+        Route::group(['prefix' => 'sets'], function () {
+            Route::resource('groups',  \App\Http\Controllers\admin\GroupController::class);
+            Route::get('overview', [\App\Http\Controllers\admin\GroupController::class, 'overview'])->name('groups.overview');
+        });
+        Route::view('/', 'admin.dashboard.default')->name('dashboard');
+        Route::resource('users', \App\Http\Controllers\admin\UserController::class);
+        Route::resource('tickets',  \App\Http\Controllers\admin\TicketController::class);
+    }
+);
