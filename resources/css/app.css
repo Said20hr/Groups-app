@@ -346,3 +346,20 @@ p {
 {
     display: none;
 }
+/* css for register*/
+.form-control{
+    border-radius: 5px !important;
+}
+.label{
+    font-size:small;
+}
+.multisteps-form__progress-btn:before{
+    /* background-color:transparent !important; */
+}
+.multisteps-form__progress-btn.js-active {
+    color:#5e72e4 !important;
+  }
+  .multisteps-form__progress-btn.js-active i:before{
+    color: #5e72e4 !important;
+  
+  }

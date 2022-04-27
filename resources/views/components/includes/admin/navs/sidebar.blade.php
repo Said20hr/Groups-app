@@ -74,16 +74,16 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a data-bs-toggle="collapse" href="#ecommerceExamples" class="nav-link " aria-controls="ecommerceExamples" role="button" aria-expanded="false">
+                <a data-bs-toggle="collapse" href="#ecommerceExamples" class="nav-link {{ (request()->is('admin/subscriptions')) ? 'active' : '' }}" aria-controls="ecommerceExamples" role="button" aria-expanded="false">
                     <div class="icon icon-shape icon-sm bg-white text-center d-flex align-items-center justify-content-center">
                         <i class="ni ni-app text-dark text-sm"></i>
                     </div>
                     <span class="nav-link-text text-white ms-3">Subscriptions</span>
                 </a>
-                <div class="collapse " id="ecommerceExamples">
+                <div class="collapse {{ (request()->is('admin/subscriptions*')) ? 'show' : '' }} " id="ecommerceExamples">
                     <ul class="nav ms-4">
                         <li class="nav-item ">
-                            <a class="nav-link " href="{{asset('dashboard/')}}/pages/ecommerce/overview.html">
+                            <a class="nav-link  {{ (request()->is('admin/subscriptions')) ? 'text-white font-bold' : 'opacity-7' }}" href="{{ route('admin.subscriptions.index') }}">
                                 <span class="sidenav-mini-icon"> O </span>
                                 <span class="sidenav-normal"> Overview </span>
                             </a>
@@ -92,13 +92,13 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a data-bs-toggle="collapse" href="#authExamples" class="nav-link " aria-controls="authExamples" role="button" aria-expanded="false">
+                <a href="{{ route('admin.payments.index') }}" class="nav-link {{ (request()->is('admin/payments')) ? 'active' : '' }}">
                     <div class="icon icon-shape icon-sm bg-white text-center d-flex align-items-center justify-content-center">
                         <i class="ni ni-single-copy-04 text-danger text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text text-white ms-3">Payment</span>
                 </a>
-                <div class="collapse " id="authExamples">
+                {{-- <div class="collapse " id="authExamples">
                     <ul class="nav ms-4">
                         <li class="nav-item ">
                             <a class="nav-link " data-bs-toggle="collapse" aria-expanded="false" href="#signinExample">
@@ -157,7 +157,7 @@
                             </div>
                         </li>
                     </ul>
-                </div>
+                </div> --}}
             </li>
         </ul>
     </div>
