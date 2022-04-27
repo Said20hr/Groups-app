@@ -23,6 +23,7 @@ Route::middleware(
     Route::get('/dash', function () {
         return view('client.dashboard');
     })->name('dashboard');
+
 });
 Route::group(
     [
@@ -38,5 +39,7 @@ Route::group(
         Route::view('/', 'admin.dashboard.default')->name('dashboard');
         Route::resource('users', \App\Http\Controllers\admin\UserController::class);
         Route::resource('tickets',  \App\Http\Controllers\admin\TicketController::class);
+        Route::resource('payments',  \App\Http\Controllers\admin\PaymentController::class);
+        Route::resource('subscriptions',  \App\Http\Controllers\admin\SubscriptionController::class);
     }
 );
