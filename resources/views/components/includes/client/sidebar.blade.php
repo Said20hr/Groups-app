@@ -1,7 +1,8 @@
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 fixed-start" id="sidenav-main">
     <div class="">
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-        <div class="flex items-center pl-4 py-4">
+        <div class="flex items-center justify-between pl-4 pr-3 py-4">
+            <div class="flex items-center">
             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                 <div class="shrink-0 mr-3">
                     <img class="h-12 w-12 rounded-full object-cover border border-gray-200"
@@ -12,15 +13,16 @@
                 <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
                 <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
             </div>
-                <div class="bg-indigo-200 hover:bg-indigo-400 text-gray-100 hover:text-white d-flex justify-content-center items-center ml-4 rounded-lg">
-                    <i class="ni ni-settings-gear-65 cursor-pointer p-1" aria-hidden="true"></i>
-                </div>
+            </div>
+            <div class="bg-gray-600 hover:bg-indigo-600 text-gray-100 hover:text-white d-flex justify-content-center items-center ml-4 rounded-lg">
+                <i class="ni ni-settings-gear-65 cursor-pointer p-1" aria-hidden="true"></i>
+            </div>
         </div>
     </div>
     <hr class="horizontal dark mt-0">
     <div class="collapse navbar-collapse w-auto h-auto h-100" id="sidenav-collapse-main">
         <ul class="navbar-nav">
-            <li class="nav-item mb-2">
+            <li class="nav-item mb-1">
                 <a href="#dashboardsExamples" class="nav-link active">
                     <div class="icon icon-shape bg-primary icon-sm text-center d-flex align-items-center justify-content-center">
                         <i class="ni ni-shop text-white text-sm opacity-10"></i>
@@ -28,7 +30,7 @@
                     <span class="nav-link-text ms-2">Dashboards</span>
                 </a>
             </li>
-            <li class="nav-item mb-2">
+            <li class="nav-item mb-1">
                 <a href="#authExamples" class="nav-link ">
                     <div class="icon icon-shape icon-sm text-center bg-primary d-flex align-items-center justify-content-center">
                         <i class="ni ni-chart-bar-32 text-white text-sm opacity-10"></i>
@@ -36,7 +38,7 @@
                     <span class="nav-link-text ms-2">Statistics</span>
                 </a>
             </li>
-            <li class="nav-item mb-2">
+            <li class="nav-item mb-1">
                 <a href="#authExamples" class="nav-link ">
                     <div class="icon icon-shape icon-sm bg-danger d-flex align-items-center justify-content-center">
                         <i class="ni ni-circle-08 text-white text-sm opacity-10"></i>
@@ -44,7 +46,7 @@
                     <span class="nav-link-text ms-2">My Profile</span>
                 </a>
             </li>
-            <li class="nav-item mb-2">
+            <li class="nav-item mb-1">
                 <a href="#applicationsExamples" class="nav-link " >
                     <div class="icon icon-shape icon-sm bg-info text-center d-flex align-items-center justify-content-center">
                         <i class="ni ni-books text-white text-sm opacity-10"></i>
@@ -52,7 +54,7 @@
                     <span class="nav-link-text ms-2">All Groups</span>
                 </a>
             </li>
-            <li class="nav-item mb-2">
+            <li class="nav-item mb-1">
                 <a data-bs-toggle="collapse" href="#pagesExamples" class="nav-link " aria-controls="pagesExamples" role="button" aria-expanded="false">
                     <div class="icon icon-shape icon-sm bg-info text-center d-flex align-items-center justify-content-center">
                         <i class="ni ni-book-bookmark text-white text-sm opacity-10"></i>
@@ -77,7 +79,7 @@
                     </ul>
                 </div>
             </li>
-            <li class="nav-item mb-2">
+            <li class="nav-item mb-1">
                 <a data-bs-toggle="collapse" href="#ecommerceExamples" class="nav-link " aria-controls="ecommerceExamples" role="button" aria-expanded="false">
                     <div class="icon icon-shape icon-sm text-center bg-success d-flex align-items-center justify-content-center">
                         <i class="ni ni-money-coins text-white text-sm opacity-10"></i>
@@ -107,13 +109,26 @@
                     </ul>
                 </div>
             </li>
-            <li class="nav-item mb-2">
+            <li class="nav-item mb-1">
                 <a href="#authExamples" class="nav-link ">
                     <div class="icon icon-shape icon-sm text-center bg-yellow-300 d-flex align-items-center justify-content-center">
                         <i class="ni ni-air-baloon text-white text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-2">Help</span>
                 </a>
+            </li>
+            <li class="nav-item mb-1">
+                <form method="POST" action="{{ route('logout') }}" x-data >
+                    @csrf
+                    <button type="submit" class="nav-link">
+                        <div class="icon icon-shape icon-sm text-center bg-gray-800 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-user-run text-white text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-2" href="{{ route('logout') }}">
+                            {{ __('Log Out') }}
+                        </span>
+                    </button>
+                </form>
             </li>
         </ul>
     </div>

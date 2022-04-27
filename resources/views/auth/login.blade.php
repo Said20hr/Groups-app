@@ -1,5 +1,3 @@
-
-login
 <x-layouts.app>
     <x-jet-authentication-card>
         <div class="card border-0 mb-0">
@@ -7,7 +5,7 @@ login
                 <h4 class="text-2xl text-dark font-medium text-center mt-2 mb-3">Sign in</h4>
                 <div class="container flex justify-center items-center">
                     <div class="mx-2 px-1">
-                        <a class="btn flex items-center text-indigo-900 border" href="javascript:;">
+                        <a class="btn flex items-center text-indigo-900 hover:text-white hover:bg-indigo-600 transition duration-300 border" href="javascript:;">
                             <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <g transform="translate(3.000000, 3.000000)" fill-rule="nonzero">
@@ -20,7 +18,7 @@ login
                         </a>
                     </div>
                     <div class="mx-2 px-1">
-                        <a class="btn flex items-center text-gray-900 border" href="javascript:;">
+                        <a class="btn flex items-center text-gray-900 hover:text-white hover:bg-gray-400 transition duration-300 border" href="javascript:;">
                             <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                     <g transform="translate(3.000000, 2.000000)" fill-rule="nonzero">
@@ -40,7 +38,7 @@ login
                 <div class="text-center text-muted mb-4 text-xl">
                     <small>Or sign in with credentials</small>
                 </div>
-                <x-jet-validation-errors class="mb-4" />
+                <x-jet-validation-errors class="mb-2" />
                 @if (session('status'))
                     <div class="mb-4 font-medium text-sm text-green-600">
                         {{ session('status') }}
@@ -58,24 +56,26 @@ login
                         <x-jet-checkbox name="remember" id="rememberMe" />
                         <label class="form-check-label" for="rememberMe">{{ __('Remember me') }}</label>
                     </div>
-                    <div class="mt-4">
-                        @if (Route::has('password.request'))
-                            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                                {{ __('Forgot your password?') }}
-                            </a>
-                        @endif
+                    <div class="mt-2">
                         <x-jet-button class="">
                             {{ __('Log in') }}
                         </x-jet-button>
                     </div>
-                    <div class="mb-2 position-relative text-center">
+                    <div class="position-relative text-center">
                         <p class="text-sm font-weight-bold mb-2 text-secondary text-border d-inline z-index-2 bg-white px-3">
                             or
                         </p>
                     </div>
                     <div class="text-center">
-                        <button type="button" class="btn gradient-btn bg-gradient bg-dark text-white w-100 mt-2 mb-4">Sign up</button>
+                        <a href="{{route('register')}}" type="button" class="btn hover:text-white main-btn gradient-btn-2 w-100 my-2">Sign up</a>
                     </div>
+                    @if (Route::has('password.request'))
+                        <div class="text-center mt-2">
+                            <a class="underline text-sm text-monospace text-indigo-900 hover:text-gray-900" href="{{ route('password.request') }}">
+                                {{ __('Forgot your password?') }}
+                            </a>
+                        </div>
+                    @endif
                 </form>
             </div>
         </div>
