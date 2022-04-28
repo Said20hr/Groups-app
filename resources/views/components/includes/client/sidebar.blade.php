@@ -5,17 +5,14 @@
             <div class="flex items-center">
             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                 <div class="shrink-0 mr-3">
-                    <img class="h-12 w-12 rounded-full object-cover border border-gray-200"
+                    <img class="h-12 w-12 rounded-full object-cover border border-indigo-500"
                          src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                 </div>
             @endif
-            <div>
-                <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-            </div>
-            </div>
-            <div class="bg-gray-600 hover:bg-indigo-600 text-gray-100 hover:text-white d-flex justify-content-center items-center ml-4 rounded-lg">
-                <i class="ni ni-settings-gear-65 cursor-pointer p-1" aria-hidden="true"></i>
+                <div>
+                    <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
+                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                </div>
             </div>
         </div>
     </div>
@@ -23,15 +20,15 @@
     <div class="collapse navbar-collapse w-auto h-auto h-100" id="sidenav-collapse-main">
         <ul class="navbar-nav">
             <li class="nav-item mb-1">
-                <a href="#dashboardsExamples" class="nav-link active">
+                <a href="{{route('dashboard')}}" class="nav-link {{ (request()->is('dashboard*')) ? 'active': '' }}">
                     <div class="icon icon-shape bg-primary icon-sm text-center d-flex align-items-center justify-content-center">
                         <i class="ni ni-shop text-white text-sm opacity-10"></i>
                     </div>
-                    <span class="nav-link-text ms-2">Dashboards</span>
+                    <span class="nav-link-text ms-2">overview</span>
                 </a>
             </li>
             <li class="nav-item mb-1">
-                <a href="#authExamples" class="nav-link ">
+                <a href="{{route('statistics')}}" class="nav-link {{ (request()->is('statistics*')) ? 'active': '' }}">
                     <div class="icon icon-shape icon-sm text-center bg-primary d-flex align-items-center justify-content-center">
                         <i class="ni ni-chart-bar-32 text-white text-sm opacity-10"></i>
                     </div>
@@ -39,7 +36,7 @@
                 </a>
             </li>
             <li class="nav-item mb-1">
-                <a href="#authExamples" class="nav-link ">
+                <a href="{{route('profile.show')}}" class="nav-link {{ (request()->is('user/profile*')) ? 'active': '' }} ">
                     <div class="icon icon-shape icon-sm bg-danger d-flex align-items-center justify-content-center">
                         <i class="ni ni-circle-08 text-white text-sm opacity-10"></i>
                     </div>
@@ -47,7 +44,7 @@
                 </a>
             </li>
             <li class="nav-item mb-1">
-                <a href="#applicationsExamples" class="nav-link " >
+                <a href="{{route('groups.all')}}" class="nav-link {{ (request()->is('groups/all*')) ? 'active': '' }}" >
                     <div class="icon icon-shape icon-sm bg-info text-center d-flex align-items-center justify-content-center">
                         <i class="ni ni-books text-white text-sm opacity-10"></i>
                     </div>
@@ -61,16 +58,16 @@
                     </div>
                     <span class="nav-link-text ms-2">My groups</span>
                 </a>
-                <div class="collapse " id="pagesExamples">
+                <div class="collapse {{ (request()->is('user/groups/*')) ? 'show': '' }}" id="pagesExamples">
                     <ul class="nav ms-4">
-                        <li class="nav-item ">
-                            <a class="nav-link " href="{{asset('dashboard/')}}/pages/pages/rtl-page.html">
+                        <li class="nav-item {{ (request()->is('user/groups/*')) ? 'active': '' }}">
+                            <a href="{{route('groups.premium')}}" class="nav-link {{ (request()->is('user/groups/premium*')) ? 'active': '' }}" >
                                 <span class="sidenav-mini-icon"> P </span>
                                 <span class="sidenav-normal"> Premium </span>
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " href="{{asset('dashboard/')}}/pages/pages/widgets.html">
+                            <a href="{{route('groups.free')}}" class="nav-link {{ (request()->is('user/groups/free*')) ? 'active': '' }}" >
                                 <span class="sidenav-mini-icon"> F </span>
                                 <span class="sidenav-normal"> Free </span>
                             </a>

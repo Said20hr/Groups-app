@@ -47,7 +47,7 @@
                             <i class="lni lni-target-customer"></i>
                         </div>
                         <div class="mt-8 services-content">
-                            <h4 class="mb-8 text-xl font-bold text-gray-900">Get started</h4>
+                            <h4 class="mb-8 text-xl font-bold text-gray-900">{{ __('Get started')}}</h4>
                             <p class="mb-8">{{ __('In the history of modern astronomy, there is probably no one
                                 greater leap forward.')}}</p>
                             <a class="duration-300 hover:text-theme-color" href="javascript:void(0)">{{ __('Learn More')}} <i class="ml-2 lni lni-chevron-right"></i></a>
@@ -62,7 +62,7 @@
                             <i class="lni lni-comments-reply"></i>
                         </div>
                         <div class="mt-8 services-content">
-                            <h4 class="mb-8 text-xl font-bold text-gray-900">Join Groups</h4>
+                            <h4 class="mb-8 text-xl font-bold text-gray-900">{{ __('Join Groups')}}</h4>
                             <p class="mb-8">{{ __('In the history of modern astronomy, there is probably no one
                                 greater leap forward.')}}</p>
                             <a class="duration-300 hover:text-theme-color" href="javascript:void(0)">{{ __('Learn More')}} <i class="ml-2 lni lni-chevron-right"></i></a>

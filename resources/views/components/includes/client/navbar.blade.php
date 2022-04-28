@@ -9,22 +9,27 @@
                 </div>
             </a>
         </div>
-        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-            <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-                <div class="input-group border border-gray-700 ">
+        <div class="collapse navbar-collapse lg:mt-12 mt-0" id="navbar">
+            <div class="ms-md-auto pe-md-3 flex items-center">
+                <div class="input-group border border-gray-700">
                     <span class="input-group-text border-0 text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
-                    <input type="text" class="form-control border-0" placeholder="Type here...">
+                    <input type="text" class="form-control border-0 w-full" placeholder="Type here...">
                 </div>
             </div>
             <ul class="navbar-nav  justify-content-end">
                 <li class="nav-item d-flex align-items-center">
-                    <a href="{{asset('dashboard/')}}/pages/authentication/signin/illustration.html" class="nav-link text-gray-900 font-weight-bold px-0" target="_blank">
-                        <i class="fa fa-user me-sm-1 text-gray-900"></i>
-                        <span class="d-sm-inline d-none text-gray-500">Sign In</span>
-                    </a>
+                    <form method="POST" action="{{ route('logout') }}"  >
+                        @csrf
+                        <button type="submit" class="nav-link">
+                            <span class="hover:text-gray-500 hover:border text-white bg-indigo-900 rounded-lg p-2">
+                                <i class="fa fa-user me-sm-1"></i> {{ __('Sign Out') }}
+                            </span>
+                        </button>
+                    </form>
+
                 </li>
                 <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-                    <a href="javascript:;" class="nav-link text-gray-900 p-0" id="iconNavbarSidenav">
+                    <a href="javascript:;" class="nav-link text-gray-600 p-0" id="iconNavbarSidenav">
                         <div class="sidenav-toggler-inner">
                             <i class="sidenav-toggler-line bg-dark"></i>
                             <i class="sidenav-toggler-line bg-dark"></i>
@@ -34,12 +39,12 @@
                 </li>
                 <li class="nav-item px-3 d-flex align-items-center">
                     <a href="javascript:;" class="nav-link p-0">
-                        <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer text-gray-900"></i>
+                        <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer text-gray-600"></i>
                     </a>
                 </li>
                 <li class="nav-item dropdown pe-2 d-flex align-items-center">
-                    <a href="javascript:;" class="nav-link text-gray-900 p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa fa-bell cursor-pointer text-gray-900"></i>
+                    <a href="javascript:;" class="nav-link p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-bell cursor-pointer text-gray-600"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
                         <li class="mb-2">

@@ -27,18 +27,20 @@ Route::middleware(
     Route::get('/dashboard', function () {
         return view('client.dashboard');
     })->name('dashboard');
-   
+    Route::get('/statistics', function () {
+        return view('client.statistics');
+    })->name('statistics');
+    Route::get('/groups/all', function () {
+        return view('client.groups.all');
+    })->name('groups.all');
+    Route::get('user/groups/free', function () {
+        return view('client.groups.all');
+    })->name('groups.free');
+    Route::get('user/groups/premium', function () {
+        return view('client.groups.all');
+    })->name('groups.premium');
 
-});
-/* for test */
-Route::get('/two-fact', function () {
-    return view('auth.two-factor-challenge');
-});
-Route::get('/verif', function () {
-    return view('auth.verify-email');
-});
-Route::get('/reset-pass', function () {
-    return view('auth.reset-password');
+
 });
 
 

@@ -61,11 +61,13 @@
                     <div class="mb-3">
                         <x-jet-input id="email" class="block mt-1 w-full" type="email" placeholder="Email" name="email" :value="old('email')" required />
                     </div>
-                    <div class="mb-3">
-                        <x-jet-input id="password" class="block mt-1 w-full" type="password" placeholder="Password" name="password" required autocomplete="new-password" />
-                    </div>
-                    <div class="mb-3">
-                        <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" placeholder="Confirm passowrd" name="password_confirmation" required autocomplete="new-password" />
+                    <div class="flex flex-wrap mb-3">
+                        <div class="w-1/2 pr-1">
+                            <x-jet-input id="password" class="block mt-1 w-full" type="password" placeholder="Password" name="password" required autocomplete="new-password" />
+                        </div>
+                        <div class="w-1/2 pl-1">
+                            <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" placeholder="Confirm passowrd" name="password_confirmation" required autocomplete="new-password" />
+                        </div>
                     </div>
                     @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                         <div class="mt-4">

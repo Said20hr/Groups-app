@@ -4,8 +4,9 @@
             <div class="py-4 card-body">
                 <div x-data="{ recovery: false }">
                     <div class="mb-4 text-base text-gray-600" x-show="! recovery" >
-                        <p class="tracking-[.25em]">{{ __('Please confirm access to your account by entering the authentication code provided by your authenticator application.') }}
-                        </p></div>
+                        <p class="text-lg">{{ __('Please confirm access to your account by entering the authentication code provided by your authenticator application.') }}
+                        </p>
+                    </div>
 
                     <div class="mb-4 text-base text-gray-600" x-show="recovery">
                         {{ __('Please confirm access to your account by entering one of your emergency recovery codes.') }}
@@ -46,7 +47,7 @@
                                                 $nextTick(() => { $refs.code.focus() })
                                             ">
                                 {{ __('Use an authentication code') }}
-                            </button> 
+                            </button>
                         </div>
                     </form>
                 </div>
