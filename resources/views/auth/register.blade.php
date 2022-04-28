@@ -18,7 +18,7 @@
                     </a>
                 </div>
                 <div class="w-1/6 mx-3 px-1">
-                    <a class="btn hover:bg-gray-200 border border-gray-50 shadow-sm"border border-gray-50 shadow-sm href="javascript:;">
+                    <a class="btn hover:bg-gray-200 border border-gray-50 shadow-sm" href="javascript:;">
                         <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <g transform="translate(7.000000, 0.564551)" fill="#000000" fill-rule="nonzero">
@@ -29,7 +29,7 @@
                     </a>
                 </div>
                 <div class="w-1/6 mx-3 px-1">
-                    <a class="btn hover:bg-gray-200 border border-gray-50 shadow-sm"border border-gray-50 shadow-sm href="javascript:;">
+                    <a class="btn hover:bg-gray-200 border border-gray-50 shadow-sm" href="javascript:;">
                         <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <g transform="translate(3.000000, 2.000000)" fill-rule="nonzero">
@@ -45,7 +45,7 @@
             </div>
             <div class="mt-1 position-relative text-center">
                 <p class="text-sm font-weight-bold mb-2 text-secondary text-border d-inline z-index-2 bg-white px-3">
-                    or
+                    {{ __('or')}}
                 </p>
             </div>
             <div class="card-body">
@@ -89,7 +89,7 @@
                         </x-jet-button>
                     </div>
                     <p class="text-sm mt-3 mb-0"> {{ __('Already registered?') }}
-                        <a href="{{ route('login') }}" class="text-dark font-weight-bolder">Sign in</a>
+                        <a href="{{ route('login') }}" class="text-dark font-weight-bolder">{{ __('Sign in') }}</a>
                     </p>
                 </form>
             </div>

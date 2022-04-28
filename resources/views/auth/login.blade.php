@@ -2,7 +2,7 @@
     <x-jet-authentication-card>
         <div class="card border-0 mb-0">
             <div class="pt-4 pb-2 bg-transparent">
-                <h4 class="text-2xl text-dark font-medium text-center mt-2 mb-3">Sign in</h4>
+                <h4 class="text-2xl text-dark font-medium text-center mt-2 mb-3">{{ __('Sign in') }}</h4>
                 <div class="container flex justify-center items-center">
                     <div class="mx-2 px-1">
                         <a class="btn flex items-center text-indigo-900 hover:text-white hover:bg-indigo-600 transition duration-300 border" href="javascript:;">
@@ -14,7 +14,7 @@
                                     </g>
                                 </g>
                             </svg>
-                            <span class="mx-2">Facebook</span>
+                            <span class="mx-2">{{ __('Facebook') }}</span>
                         </a>
                     </div>
                     <div class="mx-2 px-1">
@@ -29,14 +29,14 @@
                                     </g>
                                 </g>
                             </svg>
-                            <span class="mx-2">Google</span>
+                            <span class="mx-2">{{ __('Google') }}</span>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="card-body pt-0">
                 <div class="text-center text-muted mb-4 text-xl">
-                    <small>Or sign in with credentials</small>
+                    <small>{{ __('Or sign in with credentials') }}</small>
                 </div>
                 <x-jet-validation-errors class="mb-2" />
                 @if (session('status'))
@@ -47,10 +47,10 @@
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="mb-3">
-                        <x-jet-input id="email" class="block mt-1 w-full" type="email" placeholder="email" name="email" :value="old('email')" required autofocus />
+                        <x-jet-input id="email" class="block mt-1 w-full" type="email" placeholder="Email" name="email" :value="old('email')" required autofocus />
                     </div>
                     <div class="mb-3">
-                        <x-jet-input id="password" class="block mt-1 w-full" type="password" placeholder="password" name="password" required autocomplete="current-password" />
+                        <x-jet-input id="password" class="block mt-1 w-full" type="password" placeholder="Password" name="password" required autocomplete="current-password" />
                     </div>
                     <div class="form-check form-switch">
                         <x-jet-checkbox name="remember" id="rememberMe" />
@@ -63,11 +63,11 @@
                     </div>
                     <div class="position-relative text-center">
                         <p class="text-sm font-weight-bold mb-2 text-secondary text-border d-inline z-index-2 bg-white px-3">
-                            or
+                            {{ __('or') }}
                         </p>
                     </div>
                     <div class="text-center">
-                        <a href="{{route('register')}}" type="button" class="btn hover:text-white main-btn gradient-btn-2 w-100 my-2">Sign up</a>
+                        <a href="{{route('register')}}" type="button" class="btn hover:text-white main-btn gradient-btn-2 w-100 my-2">{{ __('Sign up') }}</a>
                     </div>
                     @if (Route::has('password.request'))
                         <div class="text-center mt-2">

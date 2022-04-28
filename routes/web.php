@@ -27,8 +27,22 @@ Route::middleware(
     Route::get('/dashboard', function () {
         return view('client.dashboard');
     })->name('dashboard');
+   
 
 });
+/* for test */
+Route::get('/two-fact', function () {
+    return view('auth.two-factor-challenge');
+});
+Route::get('/verif', function () {
+    return view('auth.verify-email');
+});
+Route::get('/reset-pass', function () {
+    return view('auth.reset-password');
+});
+
+
+
 Route::group(
     [
         'middleware' => ['auth:sanctum', config('jetstream.auth_session'), 'verified','role:admin'],
