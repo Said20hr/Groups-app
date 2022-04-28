@@ -35,9 +35,9 @@
 
 
 
-<body class="g-sidenav-show bg-gray-100">
+<body class="">
 
-<main class="main-content position-relative page-header min-vh-100" style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signup-basic.jpg');">
+<main class="main-content position-relative page-header min-vh-100" style="background-image: url('{{asset('assets/images/19333414.webp')}}');">
     <span class="mask bg-gradient-dark opacity-6"></span>
     {{ $slot }}
 </main>

@@ -1253,6 +1253,10 @@ input:checked + .toggle-bg{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
+.mx-6{
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
 .ml-3{
   margin-left: 0.75rem;
 }
@@ -2206,6 +2210,9 @@ input:checked + .toggle-bg{
 }
 .tracking-wider{
   letter-spacing: 0.05em;
+}
+.tracking-\[\.25em\]{
+  letter-spacing: .25em;
 }
 .text-gray-500{
   --tw-text-opacity: 1;

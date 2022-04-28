@@ -5,9 +5,11 @@
                 <div class="justify-center row">
                     <div class="w-full lg:w-2/3">
                         <div class="pt-32 mb-12 text-center lg:pt-48 header-hero-content">
-                            <h3 class="text-3xl font-light leading-tight text-white header-sub-title wow fadeInUp mb-4" data-wow-duration="1.3s" data-wow-delay="0.2s">Welcome to</h3>
-                            <h2 class="mb-4 text-5xl font-bold text-white header-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">Majed Analytics</h2>
-                            <p class="mb-8 text-white text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                            <h3 class="text-3xl font-light leading-tight text-white header-sub-title wow fadeInUp mb-4" data-wow-duration="1.3s" data-wow-delay="0.2s">{{ __('Welcome to') }}</h3>
+                            <h2 class="mb-4 text-5xl font-bold text-white header-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">{{ __('Majed Analytics') }}</h2>
+                            <p class="mb-8 text-white text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                                {{ __('In the history of modern astronomy, there is probably no one
+                                greater leap forward.')}}</p>
                             <a href="#" class="main-btn gradient-btn gradient-btn-2 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.1s">Get Started</a>
                         </div> <!-- header hero content -->
                     </div>
@@ -31,7 +33,8 @@
                 <div class="w-full">
                     <div class="pb-10 text-center section-title">
                         <div class="m-auto line"></div>
-                        <h3 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                        <h3 class="title">{{ __('In the history of modern astronomy, there is probably no one
+                            greater leap forward.')}}</h3>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -45,8 +48,9 @@
                         </div>
                         <div class="mt-8 services-content">
                             <h4 class="mb-8 text-xl font-bold text-gray-900">Get started</h4>
-                            <p class="mb-8">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
-                            <a class="duration-300 hover:text-theme-color" href="javascript:void(0)">Learn More <i class="ml-2 lni lni-chevron-right"></i></a>
+                            <p class="mb-8">{{ __('In the history of modern astronomy, there is probably no one
+                                greater leap forward.')}}</p>
+                            <a class="duration-300 hover:text-theme-color" href="javascript:void(0)">{{ __('Learn More')}} <i class="ml-2 lni lni-chevron-right"></i></a>
                         </div>
                     </div> <!-- single services -->
                 </div>
@@ -59,8 +63,9 @@
                         </div>
                         <div class="mt-8 services-content">
                             <h4 class="mb-8 text-xl font-bold text-gray-900">Join Groups</h4>
-                            <p class="mb-8">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
-                            <a class="duration-300 hover:text-theme-color" href="javascript:void(0)">Learn More <i class="ml-2 lni lni-chevron-right"></i></a>
+                            <p class="mb-8">{{ __('In the history of modern astronomy, there is probably no one
+                                greater leap forward.')}}</p>
+                            <a class="duration-300 hover:text-theme-color" href="javascript:void(0)">{{ __('Learn More')}} <i class="ml-2 lni lni-chevron-right"></i></a>
                         </div>
                     </div> <!-- single services -->
                 </div>
@@ -72,9 +77,10 @@
                             <i class="lni lni-stats-up"></i>
                         </div>
                         <div class="mt-8 services-content">
-                            <h4 class="mb-8 text-xl font-bold text-gray-900">increase your profite</h4>
-                            <p class="mb-8">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
-                            <a class="duration-300 hover:text-theme-color" href="javascript:void(0)">Learn More <i class="ml-2 lni lni-chevron-right"></i></a>
+                            <h4 class="mb-8 text-xl font-bold text-gray-900">{{ __('increase your profite')}}</h4>
+                            <p class="mb-8">{{ __('In the history of modern astronomy, there is probably no one
+                                greater leap forward.')}}</p>
+                            <a class="duration-300 hover:text-theme-color" href="javascript:void(0)">{{ __('Learn More')}} <i class="ml-2 lni lni-chevron-right"></i></a>
                         </div>
                     </div> <!-- single services -->
                 </div>
@@ -89,10 +95,13 @@
                     <div class="mx-4 mt-12 about-content wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
                         <div class="mb-4 section-title">
                             <div class="line"></div>
-                            <h3 class="title"><span>Crafted for</span> SaaS, App and Software Landing Page</h3>
+                            <h3 class="title"><span>{{ __('Crafted for')}}</span> {{ __('SaaS, App and Software Landing Page')}}</h3>
                         </div> <!-- section title -->
-                        <p class="mb-8">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.</p>
-                        <a href="javascript:void(0)" class="main-btn gradient-btn">Try it Free</a>
+                        <p class="mb-8">
+                            {{ __('In the history of modern astronomy, there is probably no one
+                            greater leap forward than the building and launch of the space
+                            telescope known as the Hubble..')}}</p>
+                        <a href="javascript:void(0)" class="main-btn gradient-btn">{{ __('Try it Free')}}</a>
                     </div> <!-- about content -->
                 </div>
                 <div class="w-full lg:w-1/2">
@@ -131,27 +140,31 @@
                         <div class="counter-content">
                             <div class="mb-8 section-title">
                                 <div class="line"></div>
-                                <h3 class="title">Cool facts <span> about this app</span></h3>
+                                <h3 class="title">{{ __('Cool facts ')}}<span> {{ __('about this app')}}</span></h3>
                             </div> <!-- section title -->
-                            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                            <p class="text">{{ __('
+                                In the history of modern astronomy, there is probably no one
+                                greater leap forward than the building and launch of the space
+                                telescope known as the Hubble.
+                                ')}}</p>
                         </div> <!-- counter content -->
                         <div class="row no-gutters">
                             <div class="flex items-center justify-center single-counter counter-color-1">
                                 <div class="text-center counter-items">
-                                    <span class="text-2xl font-bold text-white"><span class="counter">125</span>K</span>
-                                    <p class="text-white">Downloads</p>
+                                    <span class="text-2xl font-bold text-white"><span class="counter">125</span>{{ __('K')}}</span>
+                                    <p class="text-white">{{ __('Downloads')}}</p>
                                 </div>
                             </div> <!-- single counter -->
                             <div class="flex items-center justify-center single-counter counter-color-2">
                                 <div class="text-center counter-items">
-                                    <span class="text-2xl font-bold text-white"><span class="counter">87</span>K</span>
-                                    <p class="text-white">Active Users</p>
+                                    <span class="text-2xl font-bold text-white"><span class="counter">87</span>{{ __('K')}}</span>
+                                    <p class="text-white">{{ __('Active Users')}}</p>
                                 </div>
                             </div> <!-- single counter -->
                             <div class="flex items-center justify-center single-counter counter-color-3">
                                 <div class="text-center counter-items">
                                     <span class="text-2xl font-bold text-white"><span class="counter">4.8</span></span>
-                                    <p class="text-white">User Rating</p>
+                                    <p class="text-white">{{ __('User Rating')}}</p>
                                 </div>
                             </div> <!-- single counter -->
                         </div> <!-- row -->
@@ -170,7 +183,7 @@
                 <div class="w-full lg:w-2/3">
                     <div class="pb-10 text-center section-title">
                         <div class="m-auto line"></div>
-                        <h3 class="title">Users sharing<span> their experience</span></h3>
+                        <h3 class="title">{{ __('Users sharing')}}<span> {{ __('their experience')}}</span></h3>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -192,7 +205,8 @@
                             </div>
                         </div>
                         <div class="mb-8">
-                            <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu.</p>
+                            <p>{{ __('In the history of modern astronomy, there is probably no one
+                                greater leap forward.')}}</p>
                         </div>
                         <div class="flex items-center testimonial-author">
                             <div class="relative author-image">
@@ -200,8 +214,8 @@
                                 <img class="author" src="assets/images/author-1.png" alt="author">
                             </div>
                             <div class="author-content media-body">
-                                <h6 class="mb-1 text-xl font-bold text-gray-900">Jenny Deo</h6>
-                                <p>CEO, SpaceX</p>
+                                <h6 class="mb-1 text-xl font-bold text-gray-900">{{ __('Jenny Deo')}}</h6>
+                                <p>{{ __('CEO, SpaceX')}}</p>
                             </div>
                         </div>
                     </div> <!-- single testimonial -->
@@ -223,7 +237,8 @@
                             </div>
                         </div>
                         <div class="mb-8">
-                            <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu.</p>
+                            <p>{{ __('In the history of modern astronomy, there is probably no one
+                                greater leap forward.')}}</p>
                         </div>
                         <div class="flex items-center testimonial-author">
                             <div class="relative author-image">
@@ -231,8 +246,8 @@
                                 <img class="author" src="assets/images/author-2.png" alt="author">
                             </div>
                             <div class="author-content media-body">
-                                <h6 class="mb-1 text-xl font-bold text-gray-900">Marjin Otte</h6>
-                                <p>UX Specialist, Yoast</p>
+                                <h6 class="mb-1 text-xl font-bold text-gray-900">{{ __('Marjin Otte')}}</h6>
+                                <p>{{ __('UX Specialist, Yoast')}}</p>
                             </div>
                         </div>
                     </div> <!-- single testimonial -->
@@ -254,7 +269,8 @@
                             </div>
                         </div>
                         <div class="mb-8">
-                            <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu.</p>
+                            <p>{{ __('In the history of modern astronomy, there is probably no one
+                                greater leap forward.')}}</p>
                         </div>
                         <div class="flex items-center testimonial-author">
                             <div class="relative author-image">
@@ -262,8 +278,8 @@
                                 <img class="author" src="assets/images/author-3.png" alt="author">
                             </div>
                             <div class="author-content media-body">
-                                <h6 class="mb-1 text-xl font-bold text-gray-900">David Smith</h6>
-                                <p>CTO, Alphabet</p>
+                                <h6 class="mb-1 text-xl font-bold text-gray-900">{{ __('David Smith')}}</h6>
+                                <p>{{ __('CTO, Alphabet')}}</p>
                             </div>
                         </div>
                     </div> <!-- single testimonial -->
@@ -285,7 +301,8 @@
                             </div>
                         </div>
                         <div class="mb-8">
-                            <p>Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu.</p>
+                            <p>{{ __('In the history of modern astronomy, there is probably no one
+                                greater leap forward.')}}</p>
                         </div>
                         <div class="flex items-center testimonial-author">
                             <div class="relative author-image">
@@ -293,8 +310,8 @@
                                 <img class="author" src="assets/images/author-2.png" alt="author">
                             </div>
                             <div class="author-content media-body">
-                                <h6 class="mb-1 text-xl font-bold text-gray-900">Fajar Siddiq</h6>
-                                <p>COO, MakerFlix</p>
+                                <h6 class="mb-1 text-xl font-bold text-gray-900">{{ __('Fajar Siddiq')}}</h6>
+                                <p>{{ __('COO, MakerFlix')}}</p>
                             </div>
                         </div>
                     </div> <!-- single testimonial -->
