@@ -16,10 +16,10 @@
 
 
     <!--====== Slick CSS ======-->
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
+    <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/LineIcons.2.0.css')}}">
     <link href="{{asset('dashboards/assets/css/nucleo-icons.css')}}" rel="stylesheet" />
     <link href="{{asset('dashboards/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
     <!-- Font Awesome Icons -->
@@ -33,7 +33,7 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
     <link id="pagestyle" href="{{asset('dashboards/assets/css/argon-dashboard.css?v=2.0.0')}}" rel="stylesheet" />
     <!--====== Line Icons CSS ======-->
-
+    @livewireStyles
 </head>
 
 
@@ -43,6 +43,7 @@
 <x-includes.client.sidebar/>
 
 <main class="main-content position-relative border-radius-xl bg-white ">
+    <x-includes.client.navbar/>
     {{ $slot }}
 </main>
 
@@ -50,7 +51,7 @@
 
 @stack('js')
 
-
+@livewireScripts
 <!--====== Jquery js ======-->
 <script src="{{asset('dashboards/assets/js/core/popper.min.js')}}"></script>
 <script src="{{asset('dashboards/assets/js/core/bootstrap.min.js')}}"></script>

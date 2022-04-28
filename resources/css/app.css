@@ -23,7 +23,14 @@ p {
 .container {
     @apply px-5 mx-auto;
 }
-
+.pill
+{
+    @apply inline-block py-4 text-left text-base rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300
+}
+.active-pill
+{
+    @apply inline-block text-left text-blue-600 rounded-t-lg border-b-2 border-blue-600 active dark:text-blue-500 font-semibold dark:border-blue-500
+}
 .row {
     @apply flex flex-wrap;
 }
@@ -361,5 +368,5 @@ p {
   }
   .multisteps-form__progress-btn.js-active i:before{
     color: #5e72e4 !important;
-  
+
   }

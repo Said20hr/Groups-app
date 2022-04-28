@@ -31,6 +31,7 @@ return new class extends Migration
             $table->string('provider_id')->nullable();
             $table->timestamp('last_seen')->nullable();
             $table->boolean('active')->default(1);
+            $table->text('raison_deactivated')->nullable();
 
             //account data
             $table->text('about_me')->nullable();
@@ -38,7 +39,7 @@ return new class extends Migration
             $table->boolean('published')->default(true);
             $table->integer('followers')->default(0);
             $table->integer('following')->default(0);
-            $table->integer('tradingViewId')->nullable();
+            $table->string('tradingViewId')->nullable();
 
             //location data
             $table->text('company')->nullable();
