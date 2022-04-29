@@ -27,7 +27,9 @@ class AdminSeeder extends Seeder
                 'password' => bcrypt('password'),
                 'remember_token' => \Illuminate\Support\Str::random(60),
                 'role_id' => $role->id,
-                'phone' => 000_000_000,
+                'phone' => '067_088_590',
+                'country' =>'Algeria',
+                'company' =>'Majed company'
             ]);
         }
     }

@@ -39,7 +39,7 @@
     <div class="min-height-300 bg-dark position-absolute w-100"></div>
 <x-includes.admin.navs.sidebar/>
 
-<main class="main-content position-relative border-radius-lg ">
+<main class="main-content position-relative border-radius-sm ">
     <x-includes.admin.navs.navbar/>
     {{ $slot }}
 </main>

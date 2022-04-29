@@ -1,545 +1,387 @@
 <x-layouts.admin>
-  <div class="container-fluid mt-6">
-      <div class="row align-items-center">
-        <div class="col-lg-4 col-sm-8">
-          <div class="nav-wrapper position-relative end-0">
-            <ul class="nav nav-pills nav-fill p-1" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link mb-0 px-0 py-1 active  active " data-bs-toggle="tab" href="../../../examples/pages/account/settings.html" role="tab" aria-selected="true">
-                  Messages
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mb-0 px-0 py-1 " data-bs-toggle="tab" href="../../../examples/pages/account/billing.html" role="tab" aria-selected="false">
-                  Social
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mb-0 px-0 py-1 " data-bs-toggle="tab" href="../../../examples/pages/account/invoice.html" role="tab" aria-selected="false">
-                  Notifications
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mb-0 px-0 py-1 " data-bs-toggle="tab" href="../../../examples/pages/account/security.html" role="tab" aria-selected="false">
-                  Backup
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  </div>
   <div class="container-fluid my-5 py-2">
-      <div class="row mb-5">
+      <div class="row mb-5" style="margin-top: 50px">
         <div class="col-lg-3">
           <div class="card position-sticky top-1">
             <ul class="nav flex-column bg-white border-radius-lg p-3">
               <li class="nav-item">
                 <a class="nav-link text-body d-flex align-items-center" data-scroll="" href="#profile">
                   <i class="ni ni-spaceship me-2 text-dark opacity-6"></i>
-                  <span class="text-sm">Profile</span>
+                  <span class="text-sm">{{ __('Profile')}}</span>
                 </a>
               </li>
               <li class="nav-item pt-2">
                 <a class="nav-link text-body d-flex align-items-center" data-scroll="" href="#basic-info">
                   <i class="ni ni-books me-2 text-dark opacity-6"></i>
-                  <span class="text-sm">Basic Info</span>
-                </a>
-              </li>
-              <li class="nav-item pt-2">
-                <a class="nav-link text-body d-flex align-items-center" data-scroll="" href="#password">
-                  <i class="ni ni-atom me-2 text-dark opacity-6"></i>
-                  <span class="text-sm">Change Password</span>
+                  <span class="text-sm font-extrabold">{{ __('Basic Info')}}</span>
                 </a>
               </li>
               <li class="nav-item pt-2">
                 <a class="nav-link text-body d-flex align-items-center" data-scroll="" href="#2fa">
                   <i class="ni ni-ui-04 me-2 text-dark opacity-6"></i>
-                  <span class="text-sm">2FA</span>
+                  <span class="text-sm">{{ __('2FA')}}</span>
                 </a>
               </li>
               <li class="nav-item pt-2">
                 <a class="nav-link text-body d-flex align-items-center" data-scroll="" href="#accounts">
                   <i class="ni ni-badge me-2 text-dark opacity-6"></i>
-                  <span class="text-sm">Accounts</span>
-                </a>
-              </li>
-              <li class="nav-item pt-2">
-                <a class="nav-link text-body d-flex align-items-center" data-scroll="" href="#notifications">
-                  <i class="ni ni-bell-55 me-2 text-dark opacity-6"></i>
-                  <span class="text-sm">Notifications</span>
+                  <span class="text-sm">{{ __('Accounts')}}</span>
                 </a>
               </li>
               <li class="nav-item pt-2">
                 <a class="nav-link text-body d-flex align-items-center" data-scroll="" href="#sessions">
                   <i class="ni ni-watch-time me-2 text-dark opacity-6"></i>
-                  <span class="text-sm">Sessions</span>
-                </a>
-              </li>
-              <li class="nav-item pt-2">
-                <a class="nav-link text-body d-flex align-items-center" data-scroll="" href="#delete">
-                  <i class="ni ni-settings-gear-65 me-2 text-dark opacity-6"></i>
-                  <span class="text-sm">Delete Account</span>
+                  <span class="text-sm">{{ __('Sessions')}}</span>
                 </a>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-lg-9 mt-lg-0 mt-4">
-          <!-- Card Profile -->
-          <div class="card card-body" id="profile">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-sm-auto col-4">
-                <div class="avatar avatar-xl position-relative">
-                  <img src="../../../assets/img/team-3.jpg" alt="bruce" class="w-100 border-radius-lg shadow-sm">
-                </div>
-              </div>
-              <div class="col-sm-auto col-8 my-auto">
-                <div class="h-100">
-                  <h5 class="mb-1 font-weight-bolder">
-                    Mark Johnson
-                  </h5>
-                  <p class="mb-0 font-weight-bold text-sm">
-                    CEO / Co-Founder
-                  </p>
-                </div>
-              </div>
-              <div class="col-sm-auto ms-sm-auto mt-sm-0 mt-3 d-flex">
-                <label class="form-check-label mb-0">
-                  <small id="profileVisibility">
-                    Switch to invisible
-                  </small>
-                </label>
-                <div class="form-check form-switch ms-2">
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault23" checked onchange="visible()">
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Card Basic Info -->
-          <div class="card mt-4" id="basic-info">
-            <div class="card-header">
-              <h5>Basic Info</h5>
-            </div>
-            <div class="card-body pt-0">
-              <div class="row">
-                <div class="col-6">
-                  <label class="form-label">First Name</label>
-                  <div class="input-group">
-                    <input id="firstName" name="firstName" class="form-control" type="text" placeholder="Alec" required="required">
+          <form method="post" action="{{ route('admin.users.update_vis',$user->id) }}" >
+            @method('PUT')
+            @csrf
+              <!-- Card Profile -->
+            <div class="card card-body" id="profile">
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-sm-auto col-4">
+                    <div class="avatar avatar-xl position-relative">
+                      <img src="{{asset('dashboards/assets/img/team-3.jpg')}}" alt="bruce" class="w-100 border-radius-lg shadow-sm">
+                    </div>
+                  </div>
+                  <div class="col-sm-auto col-8 my-auto">
+                    <div class="h-100">
+                      <h5 class="mb-1 font-weight-bolder">
+                        {{$user->name." ".$user->username}}<span class="badge badge-{{$user->active == 1 ? 'success' : 'danger'}} badge-sm ms-3 my-2">{{$user->active == 1 ? 'Active' : 'Not active'}}</span>
+
+                      </h5>
+                      <p class="mb-0 font-weight-bold text-sm">
+                        {{$user->role->name}}
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-auto ms-sm-auto mt-sm-0 mt-3 d-flex">
+                    <label class="form-check-label mb-0">
+                      <small id="profileVisibility">
+                        {{ __('Switch to invisible')}}
+                      </small>
+                    </label>
+                    <div class="form-check form-switch ms-2">
+                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault23"  @if(old('active', false)) checked @endif onchange="visible()">
+                    </div>
                   </div>
                 </div>
-                <div class="col-6">
-                  <label class="form-label">Last Name</label>
-                  <div class="input-group">
-                    <input id="lastName" name="lastName" class="form-control" type="text" placeholder="Thompson" required="required">
-                  </div>
+            </div>
+          </form>
+          <form method="post" action="{{ route('admin.users.update_info',$user->id) }}" >
+            @method('PUT')
+            @csrf
+              <!-- Card Basic Info -->
+            <div class="card mt-4" id="basic-info">
+                <div class="card-header">
+                  <h5>{{ __('Basic Info')}}</h5>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-4 col-6">
-                  <label class="form-label mt-4">I'm</label>
-                  <select class="form-control" name="choices-gender" id="choices-gender">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                  </select>
-                </div>
-                <div class="col-sm-8">
+                <div class="card-body pt-0">
                   <div class="row">
-                    <div class="col-sm-5 col-5">
-                      <label class="form-label mt-4">Birth Date</label>
-                      <select class="form-control" name="choices-month" id="choices-month"></select>
+                    <div class="col-6">
+                      <label class="form-label">{{ __('First Name')}}</label>
+                      <div class="input-group">
+                        <input id="name" name="name" class="form-control" type="text"  value="{{ $user->name}}" required >
+                      </div>
                     </div>
-                    <div class="col-sm-4 col-3">
-                      <label class="form-label mt-4">&nbsp;</label>
-                      <select class="form-control" name="choices-day" id="choices-day"></select>
-                    </div>
-                    <div class="col-sm-3 col-4">
-                      <label class="form-label mt-4">&nbsp;</label>
-                      <select class="form-control" name="choices-year" id="choices-year"></select>
+                    <div class="col-6">
+                      <label class="form-label">{{ __('Last Name')}}</label>
+                      <div class="input-group">
+                        <input id="username" name="username" class="form-control" type="text"  value="{{ $user->username}}" required>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <label class="form-label mt-4">Email</label>
-                  <div class="input-group">
-                    <input id="email" name="email" class="form-control" type="email" placeholder="example@email.com">
+                  <div class="row">
+                    <div class="col-6">
+                      <label class="form-label mt-4">{{ __('Email')}}</label>
+                      <div class="input-group">
+                        <input id="email" name="email" class="form-control" type="email"  value="{{ $user->email}}" required>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <label class="form-label mt-4">{{ __('Phone Number')}}</label>
+                      <div class="input-group">
+                        <input id="phone" name="phone" class="form-control" type="number" value="{{ $user->phone}}" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6 col-6">
+                      <label class="form-label mt-4">{{ __('Street')}}</label>
+                      <input id="street" name="street" class="form-control" type="text" value="{{ $user->street}}" required >
+                    </div>
+                    <div class="col-sm-3">
+                          <label class="form-label mt-4">{{ __('City')}}</label>
+                          <input id="city" name="city" class="form-control" type="text" value="{{ $user->city}}" required>
+                    </div>
+                    <div class="col-3">
+                      <label class="form-label mt-4">{{ __('Country')}}</label>
+                      <div class="input-group">
+                        <input id="country" name="country" class="form-control" type="text" value="{{ $user->country}}" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <label class="form-label mt-4">{{ __('Trading ViewID')}}</label>
+                      <div class="input-group">
+                        <input id="tradingViewId" name="tradingViewId" class="form-control" type="text" value="{{ $user->tradingViewId}}" required>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <label class="form-label mt-4">{{ __('Company')}}</label>
+                      <div class="input-group">
+                        <input id="company" name="company" class="form-control" type="text" value="{{ $user->company}}" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-end mb-sm-0 mb-4" style="display: flex; justify-items:end;">
+                  <button type="submit" class="btn bg-gradient-success mb-0 my-2">Save</button>
                   </div>
                 </div>
-                <div class="col-6">
-                  <label class="form-label mt-4">Confirmation Email</label>
-                  <div class="input-group">
-                    <input id="confirmation" name="confirmation" class="form-control" type="email" placeholder="example@email.com">
+            </div>
+          </form>
+          <form method="post" action="{{ route('admin.users.2fa',$user->id) }}" >
+            @method('PUT')
+            @csrf
+              <!-- Card Change Password -->
+              <div class="card mt-4" id="2fa">
+                <div class="card-header d-flex">
+                  <h5 class="mb-0">Two-factor authentication</h5>
+                  <span class="badge badge-success ms-auto">Enabled</span>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex">
+                    <p class="my-auto">Security keys</p>
+                    <p class="text-secondary text-sm ms-auto my-auto me-3">No Security Keys</p>
+                    <button class="btn btn-sm btn-outline-dark mb-0" type="button">Add</button>
+                  </div>
+                  <hr class="horizontal dark">
+                  <div class="d-flex">
+                    <p class="my-auto">SMS number</p>
+                    <p class="text-secondary text-sm ms-auto my-auto me-3">{{$user->phone}}</p>
+                    <button class="btn btn-sm btn-outline-dark mb-0" type="button">Edit</button>
+                  </div>
+                  <hr class="horizontal dark">
+                  <div class="d-flex">
+                    <p class="my-auto">Authenticator app</p>
+                    <p class="text-secondary text-sm ms-auto my-auto me-3">Not Configured</p>
+                    <button class="btn btn-sm btn-outline-dark mb-0" type="button">Set up</button>
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-6">
-                  <label class="form-label mt-4">Your location</label>
-                  <div class="input-group">
-                    <input id="location" name="location" class="form-control" type="text" placeholder="Sydney, A">
+          </form>
+          <form method="post" action="{{ route('admin.users.account',$user->id) }}" >
+            @method('PUT')
+            @csrf
+              <!-- Card Accounts -->
+              <div class="card mt-4" id="accounts">
+                <div class="card-header">
+                  <h5>{{ __('Accounts')}}</h5>
+                  <p class="text-sm">{{ __('Here you can setup and manage your integration settings.')}}</p>
+                </div>
+                <div class="card-body pt-0">
+                  <div class="d-flex">
+                    <img class="width-48-px" src="{{asset('dashboards/assets/img/small-logos/logo-twitter.svg')}}" alt="logo_slack">
+                    <div class="my-auto ms-3">
+                      <div class="h-100">
+                        <h5 class="mb-0">{{ __('Twitter')}}</h5>
+                      </div>
+                    </div>
+                    <p class="text-sm text-secondary ms-auto me-3 my-auto">Enabled</p>
+                    <div class="form-check form-switch my-auto">
+                      <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault1">
+                    </div>
+                  </div>
+                  <div class="ps-5 pt-3 ms-3">
+                    <div class="d-sm-flex bg-gray-100 border-radius-lg p-2 my-4">
+                      <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Account Link')}}</p>
+                      <input class="form-control form-control-sm ms-sm-auto mt-sm-0 mt-2 w-sm-60 w-40" type="text" value="{{$user->twiter}}" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy!">
+                    </div>
+                    <div class="d-sm-flex bg-gray-100 border-radius-lg p-2 my-4">
+                      <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Account Followers')}}</p>
+                      <input class="form-control form-control-sm ms-sm-auto mt-sm-0 mt-2 w-sm-60 w-40" type="text" value="{{$user->followers}}" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy!">
+                    </div>
+                  </div>
+                  <hr class="horizontal dark">
+                  <div class="d-flex">
+                    <img class="width-48-px" src="{{asset('dashboards/assets/img/small-logos/logo-telegram.svg')}}" alt="logo_slack">
+                    <div class="my-auto ms-3">
+                      <div class="h-100">
+                        <h5 class="mb-0">{{ __('Telegram')}}</h5>
+                      </div>
+                    </div>
+                    <p class="text-sm text-secondary ms-auto me-3 my-auto">Enabled</p>
+                    <div class="form-check form-switch my-auto">
+                      <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault2">
+                    </div>
+                  </div>
+                  <div class="ps-5 pt-3 ms-3">
+                    <div class="d-sm-flex bg-gray-100 border-radius-lg p-2 my-4">
+                      <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Account Link')}}</p>
+                      <input class="form-control form-control-sm ms-sm-auto mt-sm-0 mt-2 w-sm-60 w-40" type="text" value="{{$user->telegram}}" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy!">
+                    </div>
+                    <div class="d-sm-flex bg-gray-100 border-radius-lg p-2 my-4">
+                      <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Account Followers')}}</p>
+                      <input class="form-control form-control-sm ms-sm-auto mt-sm-0 mt-2 w-sm-60 w-40" type="text" value="{{$user->followers}}" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy!">
+                    </div>
+                  </div>
+                  <hr class="horizontal dark">
+                  <div class="d-flex">
+                    <img class="width-48-px" src="{{asset('dashboards/assets/img/small-logos/logo-facebook.svg')}}" alt="logo_slack">
+                    <div class="my-auto ms-3">
+                      <div class="h-100">
+                        <h5 class="mb-0">{{ __('Facebook')}}</h5>
+                      </div>
+                    </div>
+                    <p class="text-sm text-secondary ms-auto me-3 my-auto">Enabled</p>
+                    <div class="form-check form-switch my-auto">
+                      <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault3">
+                    </div>
+                  </div> <div class="ps-5 pt-3 ms-3">
+                    <div class="d-sm-flex bg-gray-100 border-radius-lg p-2 my-4">
+                      <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Account Link')}}</p>
+                      <input class="form-control form-control-sm ms-sm-auto mt-sm-0 mt-2 w-sm-60 w-40" type="text" value="{{$user->facebook}}" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy!">
+                    </div>
+                    <div class="d-sm-flex bg-gray-100 border-radius-lg p-2 my-4">
+                      <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Account Followers')}}</p>
+                      <input class="form-control form-control-sm ms-sm-auto mt-sm-0 mt-2 w-sm-60 w-40" type="text" value="{{$user->followers}}" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy!">
+                    </div>
+                  </div>
+                  <hr class="horizontal dark">
+                  <div class="d-flex">
+                    <img class="width-48-px" src="{{asset('dashboards/assets/img/small-logos/logo-instagram.svg')}}" alt="logo_slack">
+                    <div class="my-auto ms-3">
+                      <div class="h-100">
+                        <h5 class="mb-0">{{ __('Instagram')}}</h5>
+                      </div>
+                    </div>
+                    <p class="text-sm text-secondary ms-auto me-3 my-auto">Enabled</p>
+                    <div class="form-check form-switch my-auto">
+                      <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault3">
+                    </div>
+                  </div>
+                  <div class="ps-5 pt-3 ms-3">
+                    <div class="d-sm-flex bg-gray-100 border-radius-lg p-2 my-4">
+                      <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Account Link')}}</p>
+                      <input class="form-control form-control-sm ms-sm-auto mt-sm-0 mt-2 w-sm-60 w-40" type="text" value="{{$user->instagram}}" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy!">
+                    </div>
+                    <div class="d-sm-flex bg-gray-100 border-radius-lg p-2 my-4">
+                      <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Account Followers')}}</p>
+                      <input class="form-control form-control-sm ms-sm-auto mt-sm-0 mt-2 w-sm-60 w-40" type="text" value="{{$user->followers}}" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy!">
+                    </div>
+                  </div>
+                  <div class="d-flex">
+                    <img class="width-48-px" src="{{asset('dashboards/assets/img/small-logos/logo-youtube.svg')}}" alt="logo_slack">
+                    <div class="my-auto ms-3">
+                      <div class="h-100">
+                        <h5 class="mb-0">{{ __('Youtube')}}</h5>
+                      </div>
+                    </div>
+                    <p class="text-sm text-secondary ms-auto me-3 my-auto">Enabled</p>
+                    <div class="form-check form-switch my-auto">
+                      <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault3">
+                    </div>
+                  </div>
+                  <div class="ps-5 pt-3 ms-3">
+                    <div class="d-sm-flex bg-gray-100 border-radius-lg p-2 my-4">
+                      <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Account Link')}}</p>
+                      <input class="form-control form-control-sm ms-sm-auto mt-sm-0 mt-2 w-sm-60 w-40" type="text" value="{{$user->youtube_username}}" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy!">
+                    </div>
+                    <div class="d-sm-flex bg-gray-100 border-radius-lg p-2 my-4">
+                      <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Account Followers')}}</p>
+                      <input class="form-control form-control-sm ms-sm-auto mt-sm-0 mt-2 w-sm-60 w-40" type="text" value="{{$user->followers}}" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy!">
+                    </div>
                   </div>
                 </div>
-                <div class="col-6">
-                  <label class="form-label mt-4">Phone Number</label>
-                  <div class="input-group">
-                    <input id="phone" name="phone" class="form-control" type="number" placeholder="+40 735 631 620">
+              </div>
+          </form>
+              <!-- Card Sessions -->
+              <div class="card mt-4" id="sessions">
+                <div class="card-header pb-3">
+                  <h5>Sessions</h5>
+                  <p class="text-sm">This is a list of devices that have logged into your account. Remove those that you do not recognize.</p>
+                </div>
+                <div class="card-body pt-0">
+                  <div class="d-flex align-items-center">
+                    <div class="text-center w-5">
+                      <i class="fas fa-desktop text-lg opacity-6"></i>
+                    </div>
+                    <div class="my-auto ms-3">
+                      <div class="h-100">
+                        <p class="text-sm mb-1">
+                          Bucharest 68.133.163.201
+                        </p>
+                        <p class="mb-0 text-xs">
+                          Your current session
+                        </p>
+                      </div>
+                    </div>
+                    <span class="badge badge-success badge-sm my-auto ms-auto me-3">Active</span>
+                    <p class="text-secondary text-sm my-auto me-3">EU</p>
+                    <a href="javascript:;" class="text-primary text-sm icon-move-right my-auto">See more
+                      <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                  <hr class="horizontal dark">
+                  <div class="d-flex align-items-center">
+                    <div class="text-center w-5">
+                      <i class="fas fa-desktop text-lg opacity-6"></i>
+                    </div>
+                    <p class="my-auto ms-3">Chrome on macOS</p>
+                    <p class="text-secondary text-sm ms-auto my-auto me-3">US</p>
+                    <a href="javascript:;" class="text-primary text-sm icon-move-right my-auto">See more
+                      <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                  <hr class="horizontal dark">
+                  <div class="d-flex align-items-center">
+                    <div class="text-center w-5">
+                      <i class="fas fa-mobile text-lg opacity-6"></i>
+                    </div>
+                    <p class="my-auto ms-3">Safari on iPhone</p>
+                    <p class="text-secondary text-sm ms-auto my-auto me-3">US</p>
+                    <a href="javascript:;" class="text-primary text-sm icon-move-right my-auto">See more
+                      <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
+                    </a>
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md-6 align-self-center">
-                  <label class="form-label mt-4">Language</label>
-                  <select class="form-control" name="choices-language" id="choices-language">
-                    <option value="English">English</option>
-                    <option value="French">French</option>
-                    <option value="Spanish">Spanish</option>
-                  </select>
+          <form method="post" action="{{ route('admin.users.acc',$user->id) }}" >
+              @method('PUT')
+              @csrf    
+              <!-- Card Delete Account -->
+              <div class="card mt-4" id="delete">
+                <div class="card-header">
+                  <h5>Delete Account</h5>
+                  <p class="text-sm mb-0">Once you delete your account, there is no going back. Please be certain.</p>
                 </div>
-                <div class="col-md-6">
-                  <label class="form-label mt-4">Skills</label>
-                  <input class="form-control" id="choices-skills" type="text" value="vuejs, angular, react" placeholder="Enter something" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Card Change Password -->
-          <div class="card mt-4" id="password">
-            <div class="card-header">
-              <h5>Change Password</h5>
-            </div>
-            <div class="card-body pt-0">
-              <label class="form-label">Current password</label>
-              <div class="form-group">
-                <input class="form-control" type="password" placeholder="Current password">
-              </div>
-              <label class="form-label">New password</label>
-              <div class="form-group">
-                <input class="form-control" type="password" placeholder="New password">
-              </div>
-              <label class="form-label">Confirm new password</label>
-              <div class="form-group">
-                <input class="form-control" type="password" placeholder="Confirm password">
-              </div>
-              <h5 class="mt-5">Password requirements</h5>
-              <p class="text-muted mb-2">
-                Please follow this guide for a strong password:
-              </p>
-              <ul class="text-muted ps-4 mb-0 float-start">
-                <li>
-                  <span class="text-sm">One special characters</span>
-                </li>
-                <li>
-                  <span class="text-sm">Min 6 characters</span>
-                </li>
-                <li>
-                  <span class="text-sm">One number (2 are recommended)</span>
-                </li>
-                <li>
-                  <span class="text-sm">Change it often</span>
-                </li>
-              </ul>
-              <button class="btn bg-gradient-dark btn-sm float-end mt-6 mb-0">Update password</button>
-            </div>
-          </div>
-          <!-- Card Change Password -->
-          <div class="card mt-4" id="2fa">
-            <div class="card-header d-flex">
-              <h5 class="mb-0">Two-factor authentication</h5>
-              <span class="badge badge-success ms-auto">Enabled</span>
-            </div>
-            <div class="card-body">
-              <div class="d-flex">
-                <p class="my-auto">Security keys</p>
-                <p class="text-secondary text-sm ms-auto my-auto me-3">No Security Keys</p>
-                <button class="btn btn-sm btn-outline-dark mb-0" type="button">Add</button>
-              </div>
-              <hr class="horizontal dark">
-              <div class="d-flex">
-                <p class="my-auto">SMS number</p>
-                <p class="text-secondary text-sm ms-auto my-auto me-3">+4012374423</p>
-                <button class="btn btn-sm btn-outline-dark mb-0" type="button">Edit</button>
-              </div>
-              <hr class="horizontal dark">
-              <div class="d-flex">
-                <p class="my-auto">Authenticator app</p>
-                <p class="text-secondary text-sm ms-auto my-auto me-3">Not Configured</p>
-                <button class="btn btn-sm btn-outline-dark mb-0" type="button">Set up</button>
-              </div>
-            </div>
-          </div>
-          <!-- Card Accounts -->
-          <div class="card mt-4" id="accounts">
-            <div class="card-header">
-              <h5>Accounts</h5>
-              <p class="text-sm">Here you can setup and manage your integration settings.</p>
-            </div>
-            <div class="card-body pt-0">
-              <div class="d-flex">
-                <img class="width-48-px" src="../../../assets/img/small-logos/logo-slack.svg" alt="logo_slack">
-                <div class="my-auto ms-3">
-                  <div class="h-100">
-                    <h5 class="mb-0">Slack</h5>
-                    <a class="text-sm text-body" href="javascript:;">Show less <i class="fas fa-chevron-up text-xs ms-1" aria-hidden="true"></i></a>
+                <div class="card-body d-sm-flex pt-0">
+                  <div class="d-flex align-items-center mb-sm-0 mb-4">
+                    <div>
+                      <div class="form-check form-switch mb-0">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault0">
+                      </div>
+                    </div>
+                    <div class="ms-2">
+                      <span class="text-dark font-weight-bold d-block text-sm">Confirm</span>
+                      <span class="text-xs d-block">I want to delete my account.</span>
+                    </div>
                   </div>
-                </div>
-                <p class="text-sm text-secondary ms-auto me-3 my-auto">Enabled</p>
-                <div class="form-check form-switch my-auto">
-                  <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault1">
-                </div>
-              </div>
-              <div class="ps-5 pt-3 ms-3">
-                <p class="mb-0 text-sm">You haven't added your Slack yet or you aren't authorized. Please add our Slack Bot to your account by clicking on <a href="javascript">here</a>. When you've added the bot, send your verification code that you have received.</p>
-                <div class="d-sm-flex bg-gray-100 border-radius-lg p-2 my-4">
-                  <p class="text-sm font-weight-bold my-auto ps-sm-2">Verification Code</p>
-                  <input class="form-control form-control-sm ms-sm-auto mt-sm-0 mt-2 w-sm-15 w-40" type="text" value="1172913" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy!">
-                </div>
-                <div class="d-sm-flex bg-gray-100 border-radius-lg p-2 my-4">
-                  <p class="text-sm font-weight-bold my-auto ps-sm-2">Connected account</p>
-                  <h6 class="text-sm ms-auto me-3 my-auto">hello@creative-tim.com</h6>
-                  <button class="btn btn-sm bg-gradient-danger my-sm-auto mt-2 mb-0" type="button" name="button">Delete</button>
+                  <button class="btn btn-outline-secondary mb-0 ms-auto" type="submit" name="button">Desactivate</button>
+          </form>
+                  <form action="{{ route('admin.users.destroy',$user->id)}}"  method="POST">
+                    @method('DELETE')
+                    @csrf
+                  <button class="btn bg-gradient-danger mb-0 ms-2" type="button" name="button">Delete Account</button>
+                  </form>
                 </div>
               </div>
-              <hr class="horizontal dark">
-              <div class="d-flex">
-                <img class="width-48-px" src="../../../assets/img/small-logos/logo-spotify.svg" alt="logo_spotify">
-                <div class="my-auto ms-3">
-                  <div class="h-100">
-                    <h5 class="mb-0">Spotify</h5>
-                    <p class="mb-0 text-sm">Music</p>
-                  </div>
-                </div>
-                <p class="text-sm text-secondary ms-auto me-3 my-auto">Enabled</p>
-                <div class="form-check form-switch my-auto">
-                  <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault2">
-                </div>
-              </div>
-              <hr class="horizontal dark">
-              <div class="d-flex">
-                <img class="width-48-px" src="../../../assets/img/small-logos/logo-atlassian.svg" alt="logo_atlassian">
-                <div class="my-auto ms-3">
-                  <div class="h-100">
-                    <h5 class="mb-0">Atlassian</h5>
-                    <p class="mb-0 text-sm">Payment vendor</p>
-                  </div>
-                </div>
-                <p class="text-sm text-secondary ms-auto me-3 my-auto">Enabled</p>
-                <div class="form-check form-switch my-auto">
-                  <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault3">
-                </div>
-              </div>
-              <hr class="horizontal dark">
-              <div class="d-flex">
-                <img class="width-48-px" src="../../../assets/img/small-logos/logo-asana.svg" alt="logo_asana">
-                <div class="my-auto ms-3">
-                  <div class="h-100">
-                    <h5 class="mb-0">Asana</h5>
-                    <p class="mb-0 text-sm">Organize your team</p>
-                  </div>
-                </div>
-                <div class="form-check form-switch ms-auto my-auto">
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault4">
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Card Notifications -->
-          <div class="card mt-4" id="notifications">
-            <div class="card-header">
-              <h5>Notifications</h5>
-              <p class="text-sm">Choose how you receive notifications. These notification settings apply to the things you’re watching.</p>
-            </div>
-            <div class="card-body pt-0">
-              <div class="table-responsive">
-                <table class="table mb-0">
-                  <thead>
-                    <tr>
-                      <th class="ps-1" colspan="4">
-                        <p class="mb-0">Activity</p>
-                      </th>
-                      <th class="text-center">
-                        <p class="mb-0">Email</p>
-                      </th>
-                      <th class="text-center">
-                        <p class="mb-0">Push</p>
-                      </th>
-                      <th class="text-center">
-                        <p class="mb-0">SMS</p>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="ps-1" colspan="4">
-                        <div class="my-auto">
-                          <span class="text-dark d-block text-sm">Mentions</span>
-                          <span class="text-xs font-weight-normal">Notify when another user mentions you in a comment</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault11">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault12">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault13">
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="ps-1" colspan="4">
-                        <div class="my-auto">
-                          <span class="text-dark d-block text-sm">Comments</span>
-                          <span class="text-xs font-weight-normal">Notify when another user comments your item.</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault14">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault15">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault16">
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="ps-1" colspan="4">
-                        <div class="my-auto">
-                          <span class="text-dark d-block text-sm">Follows</span>
-                          <span class="text-xs font-weight-normal">Notify when another user follows you.</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault17">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault18">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault19">
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="ps-1" colspan="4">
-                        <div class="my-auto">
-                          <p class="text-sm mb-0">Log in from a new device</p>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault20">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault21">
-                        </div>
-                      </td>
-                      <td>
-                        <div class="form-check form-switch mb-0 d-flex align-items-center justify-content-center">
-                          <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault22">
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <!-- Card Sessions -->
-          <div class="card mt-4" id="sessions">
-            <div class="card-header pb-3">
-              <h5>Sessions</h5>
-              <p class="text-sm">This is a list of devices that have logged into your account. Remove those that you do not recognize.</p>
-            </div>
-            <div class="card-body pt-0">
-              <div class="d-flex align-items-center">
-                <div class="text-center w-5">
-                  <i class="fas fa-desktop text-lg opacity-6"></i>
-                </div>
-                <div class="my-auto ms-3">
-                  <div class="h-100">
-                    <p class="text-sm mb-1">
-                      Bucharest 68.133.163.201
-                    </p>
-                    <p class="mb-0 text-xs">
-                      Your current session
-                    </p>
-                  </div>
-                </div>
-                <span class="badge badge-success badge-sm my-auto ms-auto me-3">Active</span>
-                <p class="text-secondary text-sm my-auto me-3">EU</p>
-                <a href="javascript:;" class="text-primary text-sm icon-move-right my-auto">See more
-                  <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
-                </a>
-              </div>
-              <hr class="horizontal dark">
-              <div class="d-flex align-items-center">
-                <div class="text-center w-5">
-                  <i class="fas fa-desktop text-lg opacity-6"></i>
-                </div>
-                <p class="my-auto ms-3">Chrome on macOS</p>
-                <p class="text-secondary text-sm ms-auto my-auto me-3">US</p>
-                <a href="javascript:;" class="text-primary text-sm icon-move-right my-auto">See more
-                  <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
-                </a>
-              </div>
-              <hr class="horizontal dark">
-              <div class="d-flex align-items-center">
-                <div class="text-center w-5">
-                  <i class="fas fa-mobile text-lg opacity-6"></i>
-                </div>
-                <p class="my-auto ms-3">Safari on iPhone</p>
-                <p class="text-secondary text-sm ms-auto my-auto me-3">US</p>
-                <a href="javascript:;" class="text-primary text-sm icon-move-right my-auto">See more
-                  <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Card Delete Account -->
-          <div class="card mt-4" id="delete">
-            <div class="card-header">
-              <h5>Delete Account</h5>
-              <p class="text-sm mb-0">Once you delete your account, there is no going back. Please be certain.</p>
-            </div>
-            <div class="card-body d-sm-flex pt-0">
-              <div class="d-flex align-items-center mb-sm-0 mb-4">
-                <div>
-                  <div class="form-check form-switch mb-0">
-                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault0">
-                  </div>
-                </div>
-                <div class="ms-2">
-                  <span class="text-dark font-weight-bold d-block text-sm">Confirm</span>
-                  <span class="text-xs d-block">I want to delete my account.</span>
-                </div>
-              </div>
-              <button class="btn btn-outline-secondary mb-0 ms-auto" type="button" name="button">Deactivate</button>
-              <button class="btn bg-gradient-danger mb-0 ms-2" type="button" name="button">Delete Account</button>
-            </div>
-          </div>
         </div>
       </div>
       <footer class="footer pt-3  ">
