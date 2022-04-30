@@ -61,5 +61,12 @@ Route::group(
         Route::resource('tickets',  \App\Http\Controllers\admin\TicketController::class);
         Route::resource('payments',  \App\Http\Controllers\admin\PaymentController::class);
         Route::resource('subscriptions',  \App\Http\Controllers\admin\SubscriptionController::class);
+
+        Route::put('update_vis/{id}', [\App\Http\Controllers\admin\UserController::class, 'update_vis'])->name('users.update_vis');
+        Route::put('update_info/{id}', [\App\Http\Controllers\admin\UserController::class, 'update_info'])->name('users.update_info');
+        Route::put('update_account', [\App\Http\Controllers\admin\UserController::class, 'update_accoount'])->name('users.account');
+        Route::put('update_2fa', [\App\Http\Controllers\admin\UserController::class, 'update_2fa'])->name('users.2fa');
+        Route::put('update_activate', [\App\Http\Controllers\admin\UserController::class, 'update_activate'])->name('users.acc');
+
     }
 );
