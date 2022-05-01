@@ -10,6 +10,7 @@
         <title>{{ __('Majed Analytics') }}</title>
 
         <!-- Fonts -->
+        <link href="http://fonts.cdnfonts.com/css/effra" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,10 +18,10 @@
 
 
         <!--====== Slick CSS ======-->
-        <link rel="stylesheet" href="assets/css/animate.css">
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="assets/css/slick.css">
-        <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
+        <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/LineIcons.2.0.css')}}">
         <!--====== Line Icons CSS ======-->
 
         <!-- Styles -->
@@ -37,8 +38,8 @@
         </div>
 
         <!--====== Jquery js ======-->
-        <script src="assets/js/vendor/jquery-3.5.1-min.js"></script>
-        <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+        <script src="{{asset('assets/js/vendor/jquery-3.5.1-min.js')}}"></script>
+        <script src="{{asset('assets/js/vendor/modernizr-3.7.1.min.js')}}"></script>
         <script type="text/javascript" src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
 
         <script>

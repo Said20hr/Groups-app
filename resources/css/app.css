@@ -1,7 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
+@import url('http://fonts.cdnfonts.com/css/effra');
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700|Lato:300,400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400&display=swap');
 @tailwind base;
@@ -9,11 +9,11 @@
 @tailwind utilities;
 
 body {
-    font-family: 'Lato', sans-serif !important;
+    font-family: 'Effra',sans-serif;
 }
 h1, h2, h3, h4, h5, h6,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-    font-family: 'Poppins','Cairo', sans-serif;
+    font-family: 'Effra', sans-serif;
 }
 p {
     font-size: 16px;
@@ -23,7 +23,14 @@ p {
 .container {
     @apply px-5 mx-auto;
 }
-
+.pill
+{
+    @apply inline-block py-4 text-left text-base rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300
+}
+.active-pill
+{
+    @apply inline-block text-left text-blue-600 rounded-t-lg border-b-2 border-blue-600 active dark:text-blue-500 font-semibold dark:border-blue-500
+}
 .row {
     @apply flex flex-wrap;
 }
@@ -346,3 +353,20 @@ p {
 {
     display: none;
 }
+/* css for register*/
+.form-control{
+    border-radius: 5px !important;
+}
+.label{
+    font-size:small;
+}
+.multisteps-form__progress-btn:before{
+    /* background-color:transparent !important; */
+}
+.multisteps-form__progress-btn.js-active {
+    color:#5e72e4 !important;
+  }
+  .multisteps-form__progress-btn.js-active i:before{
+    color: #5e72e4 !important;
+
+  }

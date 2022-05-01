@@ -16,17 +16,38 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/on', function () {
+    return view('auth.onbroading');
+});
+
 
 Route::middleware(
     ['auth:sanctum', config('jetstream.auth_session'), 'verified']
 )->group(function () {
-    Route::get('/dash', function () {
+    Route::get('/dashboard', function () {
         return view('client.dashboard');
     })->name('dashboard');
+    Route::get('/statistics', function () {
+        return view('client.statistics');
+    })->name('statistics');
+    Route::get('/groups/all', function () {
+        return view('client.groups.all');
+    })->name('groups.all');
+    Route::get('user/groups/free', function () {
+        return view('client.groups.all');
+    })->name('groups.free');
+    Route::get('user/groups/premium', function () {
+        return view('client.groups.all');
+    })->name('groups.premium');
+
+
 });
+
+
+
 Route::group(
     [
-        // 'middleware' => ['role:admin'],
+        'middleware' => ['auth:sanctum', config('jetstream.auth_session'), 'verified','role:admin'],
         'prefix' => 'admin',
         'as' => 'admin.',
     ],
@@ -38,5 +59,14 @@ Route::group(
         Route::view('/', 'admin.dashboard.default')->name('dashboard');
         Route::resource('users', \App\Http\Controllers\admin\UserController::class);
         Route::resource('tickets',  \App\Http\Controllers\admin\TicketController::class);
+        Route::resource('payments',  \App\Http\Controllers\admin\PaymentController::class);
+        Route::resource('subscriptions',  \App\Http\Controllers\admin\SubscriptionController::class);
+
+        Route::put('update_vis/{id}', [\App\Http\Controllers\admin\UserController::class, 'update_vis'])->name('users.update_vis');
+        Route::put('update_info/{id}', [\App\Http\Controllers\admin\UserController::class, 'update_info'])->name('users.update_info');
+        Route::put('update_account', [\App\Http\Controllers\admin\UserController::class, 'update_accoount'])->name('users.account');
+        Route::put('update_2fa', [\App\Http\Controllers\admin\UserController::class, 'update_2fa'])->name('users.2fa');
+        Route::put('update_activate', [\App\Http\Controllers\admin\UserController::class, 'update_activate'])->name('users.acc');
+
     }
 );

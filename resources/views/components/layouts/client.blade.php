@@ -9,6 +9,7 @@
     <link rel="shortcut icon" sizes="16x16" href="{{asset('assets/images/logo-3.png')}}" />
     <title>{{ __('Majed Analytics') }}</title>
     <!-- Fonts -->
+    <link href="http://fonts.cdnfonts.com/css/effra" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,24 +17,24 @@
 
 
     <!--====== Slick CSS ======-->
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
-    <link href="{{asset('dashboard/assets/css/nucleo-icons.css')}}" rel="stylesheet" />
-    <link href="{{asset('dashboard/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/LineIcons.2.0.css')}}">
+    <link href="{{asset('dashboards/assets/css/nucleo-icons.css')}}" rel="stylesheet" />
+    <link href="{{asset('dashboards/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    <link href="{{asset('dashboard/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
+    <link href="{{asset('dashboards/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
     <!-- CSS Files -->
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
-    <link id="pagestyle" href="{{asset('dashboard/assets/css/argon-dashboard.css?v=2.0.0')}}" rel="stylesheet" />
+    <link id="pagestyle" href="{{asset('dashboards/assets/css/argon-dashboard.css?v=2.0.0')}}" rel="stylesheet" />
     <!--====== Line Icons CSS ======-->
-
+    @livewireStyles
 </head>
 
 
@@ -43,6 +44,7 @@
 <x-includes.client.sidebar/>
 
 <main class="main-content position-relative border-radius-xl bg-white ">
+    <x-includes.client.navbar/>
     {{ $slot }}
 </main>
 
@@ -50,18 +52,18 @@
 
 @stack('js')
 
-
+@livewireScripts
 <!--====== Jquery js ======-->
-<script src="{{asset('dashboard/assets/js/core/popper.min.js')}}"></script>
-<script src="{{asset('dashboard/assets/js/core/bootstrap.min.js')}}"></script>
-<script src="{{asset('dashboard/assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
-<script src="{{asset('dashboard/assets/js/plugins/smooth-scrollbar.min.js')}}"></script>
+<script src="{{asset('dashboards/assets/js/core/popper.min.js')}}"></script>
+<script src="{{asset('dashboards/assets/js/core/bootstrap.min.js')}}"></script>
+<script src="{{asset('dashboards/assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
+<script src="{{asset('dashboards/assets/js/plugins/smooth-scrollbar.min.js')}}"></script>
 <!--====== Plugins js ======-->
 <!-- Github buttons -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!--====== Main js ======-->
 <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-<script src="{{asset('dashboard/assets/js/argon-dashboard.min.js?v=2.0.0')}}"></script>
+<script src="{{asset('dashboards/assets/js/argon-dashboard.min.js?v=2.0.0')}}"></script>
 
 
 </body>

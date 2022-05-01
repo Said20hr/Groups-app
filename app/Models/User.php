@@ -27,7 +27,12 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name', 'email', 'password',
-    ];
+        'username', 'phone','role_id','provider_id','last_seen','active',
+        'about_me','reputation','published','followers','following',
+        'tradingViewId','company','location','street','city',
+        'state','country','twitter','linkedIn','telegram','facebook',
+        'instagram','website','youtube_chanel','youtube_username',
+        ];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -58,4 +63,8 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
 }

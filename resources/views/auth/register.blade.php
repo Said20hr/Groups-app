@@ -1,12 +1,12 @@
 <x-layouts.app>
     <x-jet-authentication-card>
         <div class="card z-index-0">
-            <div class="card-header text-center pt-4">
-                <h5 class="text-2xl font-medium">Register with</h5>
+            <div class="card-header text-center pt-3">
+                <h5 class="text-2xl font-medium">{{__('Register with')}}</h5>
             </div>
             <div class="container flex justify-center items-center">
                 <div class="w-1/6 mx-3 px-1">
-                    <a class="btn btn-outline-light " href="javascript:;">
+                    <a class="btn hover:bg-gray-200 border border-gray-50 shadow-sm" href="javascript:;">
                         <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <g transform="translate(3.000000, 3.000000)" fill-rule="nonzero">
@@ -18,7 +18,7 @@
                     </a>
                 </div>
                 <div class="w-1/6 mx-3 px-1">
-                    <a class="btn btn-outline-light" href="javascript:;">
+                    <a class="btn hover:bg-gray-200 border border-gray-50 shadow-sm" href="javascript:;">
                         <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <g transform="translate(7.000000, 0.564551)" fill="#000000" fill-rule="nonzero">
@@ -29,7 +29,7 @@
                     </a>
                 </div>
                 <div class="w-1/6 mx-3 px-1">
-                    <a class="btn btn-outline-light" href="javascript:;">
+                    <a class="btn hover:bg-gray-200 border border-gray-50 shadow-sm" href="javascript:;">
                         <svg width="24px" height="32px" viewBox="0 0 64 64" version="1.1">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                 <g transform="translate(3.000000, 2.000000)" fill-rule="nonzero">
@@ -43,9 +43,9 @@
                     </a>
                 </div>
             </div>
-            <div class="mt-2 position-relative text-center">
+            <div class="mt-1 position-relative text-center">
                 <p class="text-sm font-weight-bold mb-2 text-secondary text-border d-inline z-index-2 bg-white px-3">
-                    or
+                    {{ __('or')}}
                 </p>
             </div>
             <div class="card-body">
@@ -56,13 +56,18 @@
                         <x-jet-input id="name" class="block mt-1 w-full" type="text" placeholder="Name" name="name" :value="old('name')" required autofocus autocomplete="name" />
                     </div>
                     <div class="mb-3">
-                        <x-jet-input id="email" class="block mt-1 w-full" type="email" placeholder="email" name="email" :value="old('email')" required />
+                        <x-jet-input id="username" class="block mt-1 w-full" type="text" placeholder="Username" name="username" :value="old('username')" required autofocus autocomplete="username" />
                     </div>
                     <div class="mb-3">
-                        <x-jet-input id="password" class="block mt-1 w-full" type="password" placeholder="password" name="password" required autocomplete="new-password" />
+                        <x-jet-input id="email" class="block mt-1 w-full" type="email" placeholder="Email" name="email" :value="old('email')" required />
                     </div>
-                    <div class="mb-3">
-                        <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" placeholder="Confirm passowrd" name="password_confirmation" required autocomplete="new-password" />
+                    <div class="flex flex-wrap mb-3">
+                        <div class="w-1/2 pr-1">
+                            <x-jet-input id="password" class="block mt-1 w-full" type="password" placeholder="Password" name="password" required autocomplete="new-password" />
+                        </div>
+                        <div class="w-1/2 pl-1">
+                            <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" placeholder="Confirm passowrd" name="password_confirmation" required autocomplete="new-password" />
+                        </div>
                     </div>
                     @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                         <div class="mt-4">
@@ -80,13 +85,13 @@
                                             </x-jet-label>
                                         </div>
                     @endif
-                    <div class="flex items-center justify-end mt-4">
+                    <div class="flex items-center justify-end">
                         <x-jet-button>
                             {{ __('Register') }}
                         </x-jet-button>
                     </div>
                     <p class="text-sm mt-3 mb-0"> {{ __('Already registered?') }}
-                        <a href="{{ route('login') }}" class="text-dark font-weight-bolder">Sign in</a>
+                        <a href="{{ route('login') }}" class="text-dark font-weight-bolder">{{ __('Sign in') }}</a>
                     </p>
                 </form>
             </div>

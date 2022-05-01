@@ -126,7 +126,7 @@
           <div class="card card-carousel overflow-hidden h-100 p-0">
             <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
               <div class="carousel-inner border-radius-lg h-100">
-                <div class="carousel-item h-100 active" style="background-image: url('{{asset('dashboard/assets/img/img-2.jpg')}}');   background-size: cover;">
+                <div class="carousel-item h-100 active" style="background-image: url('{{asset('dashboards/assets/img/img-2.jpg')}}');   background-size: cover;">
                   <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
                     <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
                       <i class="ni ni-camera-compact text-dark opacity-10"></i>
@@ -135,7 +135,7 @@
                     <p>There’s nothing I really wanted to do in life that I wasn’t able to get good at.</p>
                   </div>
                 </div>
-                <div class="carousel-item h-100" style="background-image: url('{{asset('dashboard/')}}/assets/img/img-1.jpg');
+                <div class="carousel-item h-100" style="background-image: url('{{asset('dashboards/')}}/assets/img/img-1.jpg');
       background-size: cover;">
                   <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
                     <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
@@ -145,7 +145,7 @@
                     <p>That’s my skill. I’m not really specifically talented at anything except for the ability to learn.</p>
                   </div>
                 </div>
-                <div class="carousel-item h-100" style="background-image: url('{{asset('dashboard/')}}/assets/img/img-3.jpg');
+                <div class="carousel-item h-100" style="background-image: url('{{asset('dashboards/')}}/assets/img/img-3.jpg');
       background-size: cover;">
                   <div class="carousel-caption d-none d-md-block bottom-0 text-start start-0 ms-5">
                     <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
@@ -180,7 +180,7 @@
                   <div class="row align-items-center">
                     <div class="col-auto d-flex align-items-center">
                       <a href="javascript:;" class="avatar">
-                        <img class="border-radius-lg" alt="Image placeholder" src="{{asset('dashboard/assets/img/team-1.jpg')}}">
+                        <img class="border-radius-lg" alt="Image placeholder" src="{{asset('dashboards/assets/img/team-1.jpg')}}">
                       </a>
                     </div>
                     <div class="col ml-2">
@@ -198,7 +198,7 @@
                   <div class="row align-items-center">
                     <div class="col-auto d-flex align-items-center">
                       <a href="javascript:;" class="avatar">
-                        <img class="border-radius-lg" alt="Image placeholder" src="{{asset('dashboard/assets/img/team-2.jpg')}}">
+                        <img class="border-radius-lg" alt="Image placeholder" src="{{asset('dashboards/assets/img/team-2.jpg')}}">
                       </a>
                     </div>
                     <div class="col ml-2">
@@ -216,7 +216,7 @@
                   <div class="row align-items-center">
                     <div class="col-auto d-flex align-items-center">
                       <a href="javascript:;" class="avatar">
-                        <img class="border-radius-lg" alt="Image placeholder" src="{{asset('dashboard/assets/img/team-5.jpg')}}">
+                        <img class="border-radius-lg" alt="Image placeholder" src="{{asset('dashboards/assets/img/team-5.jpg')}}">
                       </a>
                     </div>
                     <div class="col ml-2">
@@ -234,7 +234,7 @@
                   <div class="row align-items-center">
                     <div class="col-auto d-flex align-items-center">
                       <a href="javascript:;" class="avatar">
-                        <img class="border-radius-lg" alt="Image placeholder" src="{{asset('dashboard/assets/img/team-4.jpg')}}">
+                        <img class="border-radius-lg" alt="Image placeholder" src="{{asset('dashboards/assets/img/team-4.jpg')}}">
                       </a>
                     </div>
                     <div class="col ml-2">
@@ -318,7 +318,7 @@
                   <div class="row align-items-center">
                     <div class="col-auto">
                       <a href="javascript:;" class="avatar rounded-circle">
-                        <img alt="Image placeholder" src="{{asset('dashboard/')}}/assets/img/small-logos/logo-jira.svg">
+                        <img alt="Image placeholder" src="{{asset('dashboards/')}}/assets/img/small-logos/logo-jira.svg">
                       </a>
                     </div>
                     <div class="col">
@@ -333,7 +333,7 @@
                   <div class="row align-items-center">
                     <div class="col-auto">
                       <a href="javascript:;" class="avatar rounded-circle">
-                        <img alt="Image placeholder" src="{{asset('dashboard/')}}/assets/img/small-logos/logo-asana.svg">
+                        <img alt="Image placeholder" src="{{asset('dashboards/')}}/assets/img/small-logos/logo-asana.svg">
                       </a>
                     </div>
                     <div class="col">
@@ -348,7 +348,7 @@
                   <div class="row align-items-center">
                     <div class="col-auto">
                       <a href="javascript:;" class="avatar rounded-circle">
-                        <img alt="Image placeholder" src="{{asset('dashboard/')}}/assets/img/small-logos/logo-spotify.svg">
+                        <img alt="Image placeholder" src="{{asset('dashboards/')}}/assets/img/small-logos/logo-spotify.svg">
                       </a>
                     </div>
                     <div class="col">
@@ -363,7 +363,7 @@
                   <div class="row align-items-center">
                     <div class="col-auto">
                       <a href="javascript:;" class="avatar rounded-circle">
-                        <img alt="Image placeholder" src="{{asset('dashboard/')}}/assets/img/small-logos/bootstrap.svg">
+                        <img alt="Image placeholder" src="{{asset('dashboards/')}}/assets/img/small-logos/bootstrap.svg">
                       </a>
                     </div>
                     <div class="col">
@@ -385,7 +385,7 @@
             <div class="card-header d-flex align-items-center border-bottom py-3">
               <div class="d-flex align-items-center">
                 <a href="javascript:;">
-                  <img src="{{asset('dashboard/')}}/assets/img/team-4.jpg" class="avatar" alt="profile-image">
+                  <img src="{{asset('dashboards/')}}/assets/img/team-4.jpg" class="avatar" alt="profile-image">
                 </a>
                 <div class="mx-3">
                   <a href="javascript:;" class="text-dark font-weight-600 text-sm">John Snow</a>
@@ -424,13 +424,13 @@
                   <div class="d-flex align-items-center justify-content-sm-end">
                     <div class="d-flex align-items-center">
                       <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-toggle="tooltip" data-original-title="Jessica Rowland">
-                        <img alt="Image placeholder" src="{{asset('dashboard/')}}/assets/img/team-5.jpg" class="">
+                        <img alt="Image placeholder" src="{{asset('dashboards/')}}/assets/img/team-5.jpg" class="">
                       </a>
                       <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-toggle="tooltip" data-original-title="Audrey Love">
-                        <img alt="Image placeholder" src="{{asset('dashboard/')}}/assets/img/team-2.jpg" class="rounded-circle">
+                        <img alt="Image placeholder" src="{{asset('dashboards/')}}/assets/img/team-2.jpg" class="rounded-circle">
                       </a>
                       <a href="javascript:;" class="avatar avatar-xs rounded-circle" data-toggle="tooltip" data-original-title="Michael Lewis">
-                        <img alt="Image placeholder" src="{{asset('dashboard/')}}/assets/img/team-1.jpg" class="rounded-circle">
+                        <img alt="Image placeholder" src="{{asset('dashboards/')}}/assets/img/team-1.jpg" class="rounded-circle">
                       </a>
                     </div>
                     <small class="ps-2 font-weight-bold">and 30+ more</small>
@@ -442,7 +442,7 @@
               <div class="mb-1">
                 <div class="d-flex">
                   <div class="flex-shrink-0">
-                    <img alt="Image placeholder" class="avatar rounded-circle" src="{{asset('dashboard/')}}/assets/img/bruce-mars.jpg">
+                    <img alt="Image placeholder" class="avatar rounded-circle" src="{{asset('dashboards/')}}/assets/img/bruce-mars.jpg">
                   </div>
                   <div class="flex-grow-1 ms-3">
                     <h6 class="h5 mt-0">Michael Lewis</h6>
@@ -461,7 +461,7 @@
                 </div>
                 <div class="d-flex mt-3">
                   <div class="flex-shrink-0">
-                    <img alt="Image placeholder" class="avatar rounded-circle" src="{{asset('dashboard/')}}/assets/img/team-5.jpg">
+                    <img alt="Image placeholder" class="avatar rounded-circle" src="{{asset('dashboards/')}}/assets/img/team-5.jpg">
                   </div>
                   <div class="flex-grow-1 ms-3">
                     <h6 class="h5 mt-0">Jessica Stones</h6>
@@ -480,7 +480,7 @@
                 </div>
                 <div class="d-flex mt-4">
                   <div class="flex-shrink-0">
-                    <img alt="Image placeholder" class="avatar rounded-circle me-3" src="{{asset('dashboard/')}}/assets/img/team-4.jpg">
+                    <img alt="Image placeholder" class="avatar rounded-circle me-3" src="{{asset('dashboards/')}}/assets/img/team-4.jpg">
                   </div>
                   <div class="flex-grow-1 my-auto">
                     <form>
@@ -763,7 +763,7 @@
                 <div class="card-body">
                   <div class="row justify-content-between align-items-center">
                     <div class="col">
-                      <img src="{{asset('dashboard/')}}/assets/img/logos/bitcoin.jpg" class="w-30 border-radius-md" alt="Image placeholder">
+                      <img src="{{asset('dashboards/')}}/assets/img/logos/bitcoin.jpg" class="w-30 border-radius-md" alt="Image placeholder">
                     </div>
                     <div class="col-auto">
                       <span class="badge badge-lg badge-success">Active</span>
@@ -810,7 +810,7 @@
                       <td class="w-30">
                         <div class="d-flex px-2 py-1 align-items-center">
                           <div>
-                            <img src="{{asset('dashboard/')}}/assets/img/icons/flags/US.png" alt="Country flag">
+                            <img src="{{asset('dashboards/')}}/assets/img/icons/flags/US.png" alt="Country flag">
                           </div>
                           <div class="ms-4">
                             <p class="text-xs font-weight-bold mb-0">Country:</p>
@@ -841,7 +841,7 @@
                       <td class="w-30">
                         <div class="d-flex px-2 py-1 align-items-center">
                           <div>
-                            <img src="{{asset('dashboard/')}}/assets/img/icons/flags/DE.png" alt="Country flag">
+                            <img src="{{asset('dashboards/')}}/assets/img/icons/flags/DE.png" alt="Country flag">
                           </div>
                           <div class="ms-4">
                             <p class="text-xs font-weight-bold mb-0">Country:</p>
@@ -872,7 +872,7 @@
                       <td class="w-30">
                         <div class="d-flex px-2 py-1 align-items-center">
                           <div>
-                            <img src="{{asset('dashboard/')}}/assets/img/icons/flags/GB.png" alt="Country flag">
+                            <img src="{{asset('dashboards/')}}/assets/img/icons/flags/GB.png" alt="Country flag">
                           </div>
                           <div class="ms-4">
                             <p class="text-xs font-weight-bold mb-0">Country:</p>
@@ -903,7 +903,7 @@
                       <td class="w-30">
                         <div class="d-flex px-2 py-1 align-items-center">
                           <div>
-                            <img src="{{asset('dashboard/')}}/assets/img/icons/flags/BR.png" alt="Country flag">
+                            <img src="{{asset('dashboards/')}}/assets/img/icons/flags/BR.png" alt="Country flag">
                           </div>
                           <div class="ms-4">
                             <p class="text-xs font-weight-bold mb-0">Country:</p>
@@ -1204,9 +1204,9 @@
 
   @push('js')
 
-  <script src="{{asset('dashboard/assets/js/plugins/dragula/dragula.min.js')}}"></script>
-  <script src="{{asset('dashboard/assets/js/plugins/jkanban/jkanban.js')}}"></script>
-  <script src="{{asset('dashboard/assets/js/plugins/chartjs.min.js')}}"></script>
+  <script src="{{asset('dashboards/assets/js/plugins/dragula/dragula.min.js')}}"></script>
+  <script src="{{asset('dashboards/assets/js/plugins/jkanban/jkanban.js')}}"></script>
+  <script src="{{asset('dashboards/assets/js/plugins/chartjs.min.js')}}"></script>
   <script>
     var ctx1 = document.getElementById("chart-line").getContext("2d");
 
