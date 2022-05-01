@@ -10,19 +10,19 @@
             </a>
         </div>
         <nav aria-label="breadcrumb border border-white">
-            <h4 class="font-weight-bolder mb-0 text-white px-4">Dashboard</h4>
+            <h4 class="font-weight-bolder mb-0 text-white lg:px-4">Dashboard</h4>
         </nav>
 
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
             <div class="ms-md-auto pe-md-3 d-flex align-items-center">
                 <div class="input-group">
                     <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
-                    <input type="text" class="form-control" placeholder="Type here...">
+                    <input type="text" class="form-control" style="border-radius: 0 7px 7px 0 !important;" placeholder="Type here...">
                 </div>
             </div>
             <ul class="navbar-nav justify-content-end">
                 <li class="nav-item d-flex align-items-center">
-                    <a href="{{asset('dashboard/')}}/pages/authentication/signin/illustration.html" class="nav-link text-white font-weight-bold px-0" target="_blank">
+                    <a href="{{asset('dashboards/')}}/pages/authentication/signin/illustration.html" class="nav-link text-white font-weight-bold px-0" target="_blank">
                         <i class="fa fa-user me-sm-1"></i>
                         <span class="d-sm-inline d-none">Sign In</span>
                     </a>
@@ -50,7 +50,7 @@
                             <a class="dropdown-item border-radius-md" href="javascript:;">
                                 <div class="d-flex py-1">
                                     <div class="my-auto">
-                                        <img src="{{asset('dashboard/')}}/assets/img/team-2.jpg" class="avatar avatar-sm  me-3 " alt="user image">
+                                        <img src="{{asset('dashboards/')}}/assets/img/team-2.jpg" class="avatar avatar-sm  me-3 " alt="user image">
                                     </div>
                                     <div class="d-flex flex-column justify-content-center">
                                         <h6 class="text-sm font-weight-normal mb-1">
@@ -68,7 +68,7 @@
                             <a class="dropdown-item border-radius-md" href="javascript:;">
                                 <div class="d-flex py-1">
                                     <div class="my-auto">
-                                        <img src="{{asset('dashboard/')}}/assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark  me-3 " alt="logo spotify">
+                                        <img src="{{asset('dashboards/')}}/assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark  me-3 " alt="logo spotify">
                                     </div>
                                     <div class="d-flex flex-column justify-content-center">
                                         <h6 class="text-sm font-weight-normal mb-1">

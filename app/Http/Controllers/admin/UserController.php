@@ -3,9 +3,15 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
+use Jenssegers\Agent\Agent;
 use Illuminate\Support\Facades\Hash;
+use Stevebauman\Location\Facades\Location;
+
+
 class UserController extends Controller
 {
     /**
@@ -57,7 +63,7 @@ class UserController extends Controller
             'youtube_chanel' => 'required|string',
             'youtube_username' => 'required|string',
         ]);
-       
+
 
         $user = new User([
             'name' => $request->name,
@@ -106,11 +112,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        $user=User::find($id);
         return view('admin.dashboard.users.edit',compact('user'));
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -131,7 +137,7 @@ class UserController extends Controller
     }
     public function update_info(Request $request, $id)
     {
-       
+
         $request->validate([
             'name' => 'required|string',
             'username' => 'required|string',
@@ -143,8 +149,8 @@ class UserController extends Controller
             'country' => 'required|string',
             'tradingViewId' => 'required|string'
         ]);
-        
-       
+
+
         $user = User::find($id);
         $user->name = $request->get('name');
         $user->username = $request->get('username');
@@ -202,17 +208,16 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        $user = User::find($id);
-        if ($user)
+        if ($user->role->id != 1)
         {
             $user->delete();
         }
        else
        {
-           return redirect()->back()->with('error', 'user not found');
+           return redirect()->back()->with('error', 'user Cannot be deleted');
        }
-       return redirect()->route('admin.users.index')->with('delete', 'User successfully deleted');
+       return redirect()->route('admin.users.index')->with('delete', 'User Has been deleted successfully');
     }
 }

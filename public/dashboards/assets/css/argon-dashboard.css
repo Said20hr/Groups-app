@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+@import url('http://fonts.cdnfonts.com/css/effra');
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -51,7 +51,7 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 103, 116, 142;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: "Open Sans", sans-serif;
+  --bs-font-sans-serif: 'Effra', sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -21991,7 +21991,7 @@ hr.horizontal.gray-light {
   color: #344767;
   padding: 0.5rem 1rem;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.975rem;
 }
 
 .navbar.navbar-absolute {
@@ -23064,7 +23064,7 @@ hr.horizontal.gray-light {
   font-weight: 700;
   content: "\f107";
   margin-left: auto;
-  color: rgba(33, 37, 41, 0.5);
+  color: rgba(231, 238, 244, 0.62);
   transition: all 0.2s ease-in-out;
 }
 
@@ -23097,8 +23097,9 @@ hr.horizontal.gray-light {
   position: relative;
   background-color: transparent;
   box-shadow: none;
-  color: rgba(33, 37, 41, 0.5);
+  color: rgba(214, 224, 234, 0.7);
   margin-left: 1.35rem;
+    font-size: 15px;
 }
 
 .navbar-vertical .navbar-nav .nav-item .collapse .nav .nav-item .nav-link.active,
@@ -31615,8 +31616,9 @@ Github: https://github.com/fiduswriter/Simple-DataTables
 }
 
 .dataTable-wrapper .dataTable-top .dataTable-dropdown label .dataTable-selector {
-  border-color: #e9ecef;
-  border-radius: 0.25rem;
+    border-color: #e9ecef;
+    border-radius: 0.25rem;
+    width: 45px !important;
 }
 
 .dataTable-wrapper .dataTable-top .dataTable-search input {

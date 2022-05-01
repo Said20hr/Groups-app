@@ -541,6 +541,7 @@ function initNavs() {
         item.querySelector('li:nth-child(' + index + ') .nav-link').onclick = function() {
           moving_div = item.querySelector('.moving-tab');
           let sum = 0;
+
           if (item.classList.contains('flex-column')) {
             for (var j = 1; j <= nodes.indexOf(li); j++) {
               sum += item.querySelector('li:nth-child(' + j + ')').offsetHeight;
@@ -667,10 +668,13 @@ if (document.querySelector('.sidenav-toggler')) {
   var sidenavToggler = document.getElementsByClassName('sidenav-toggler')[0];
   var sidenavShow = document.getElementsByClassName('g-sidenav-show')[0];
   var toggleNavbarMinimize = document.getElementById('navbarMinimize');
+  var title = document.getElementById('title-logo');
 
   if (sidenavShow) {
     sidenavToggler.onclick = function() {
+
       if (!sidenavShow.classList.contains('g-sidenav-hidden')) {
+          title.classList.add('hidden');
         sidenavShow.classList.remove('g-sidenav-pinned');
         sidenavShow.classList.add('g-sidenav-hidden');
         if (toggleNavbarMinimize) {
@@ -680,6 +684,7 @@ if (document.querySelector('.sidenav-toggler')) {
       } else {
         sidenavShow.classList.remove('g-sidenav-hidden');
         sidenavShow.classList.add('g-sidenav-pinned');
+          title.classList.remove('hidden');
         if (toggleNavbarMinimize) {
           toggleNavbarMinimize.click();
           toggleNavbarMinimize.removeAttribute("checked");
@@ -709,13 +714,13 @@ function toggleSidenav() {
   if (body.classList.contains(className)) {
     body.classList.remove(className);
     setTimeout(function() {
-      sidenav.classList.remove('bg-white');
+      sidenav.classList.remove('bg-indigo-800');
     }, 100);
     sidenav.classList.remove('bg-transparent');
 
   } else {
     body.classList.add(className);
-    sidenav.classList.add('bg-white');
+    sidenav.classList.add('bg-indigo-800');
     sidenav.classList.remove('bg-transparent');
     iconSidenav.classList.remove('d-none');
   }
@@ -734,10 +739,10 @@ function navbarColorOnResize() {
       if (referenceButtons.classList.contains('active') && referenceButtons.getAttribute('data-class') === 'bg-default') {
         sidenav.classList.remove('bg-white');
       } else {
-        sidenav.classList.add('bg-white');
+        sidenav.classList.add('bg-indigo-800');
       }
     } else {
-      sidenav.classList.add('bg-white');
+      sidenav.classList.add('bg-indigo-800');
       sidenav.classList.remove('bg-default');
     }
   }

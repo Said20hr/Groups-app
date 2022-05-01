@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors')
 module.exports = {
     content: [
@@ -13,6 +13,9 @@ module.exports = {
     ],
 
     theme: {
+        fontFamily: {
+            'sans': ['Effra' ],
+        },
         colors: {
             ...colors,
         },
