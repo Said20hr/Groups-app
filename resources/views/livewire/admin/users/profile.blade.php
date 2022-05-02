@@ -1,4 +1,4 @@
-<div class="card card-body border" id="profile">
+<div class="p-3 rounded-lg bg-white border border-secondary" id="profile">
     <div class="flex justify-between items-start">
         <div class="flex flex-wrap">
             <div class="position-relative">
