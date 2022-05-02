@@ -1,4 +1,4 @@
-<div class="card card-body border" id="profile">
+<div class="p-3 rounded-lg bg-white border border-secondary shadow" id="profile">
     <div class="flex justify-between items-start">
         <div class="flex flex-wrap">
             <div class="position-relative">
@@ -6,11 +6,14 @@
             </div>
             <div class="mx-3 my-1">
                 <div class="h-100">
-                    <h5 class="mb-1 font-weight-bolder">
+                    <p class="mb-1 font-weight-bolder text-xl">
                         {{$user->name}}
-                    </h5>
-                    <p class="mb-0 font-weight-bold text-sm">
+                    </p>
+                    <p class="mb-1 text-base">
                         {{$user->username}}
+                    </p>
+                    <p class="mb-0 text-sm">
+                        {{$user->email}}
                     </p>
                 </div>
             </div>

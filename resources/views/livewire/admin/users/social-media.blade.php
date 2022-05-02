@@ -1,13 +1,11 @@
-<div class="p-3 bg-white rounded-md border border-secondary shadow mt-4" id="social">
+<div class="p-3 bAdming-white rounded-md border border-secondary shadow mt-4" id="social">
     <div class="card-header">
         <h5>{{ __('Social media')}}</h5>
         <p class="text-sm">{{ __('Here you can setup and manage user social media.')}}</p>
     </div>
-    <div class="card-body pt-0">
-        <form method="post" action="{{ route('admin.users.account',$user->id) }}" >
-            @method('PUT')
-            @csrf
-            <div>
+    <form wire:submit.prevent="updateSocial">
+    <div class="card-body pt-0 pb-5">
+        <div>
                 <!-- Telegram-->
                 <div class="py-2">
                 <div class="d-flex">
@@ -17,16 +15,12 @@
                             <h5 class="mb-0">{{ __('Telegram')}}</h5>
                         </div>
                     </div>
-                    <p class="text-sm text-secondary ms-auto me-3 my-auto">Enabled</p>
-                    <div class="form-check form-switch my-auto">
-                        <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault2">
-                    </div>
                 </div>
                 <div class="pt-2">
                     <div class="flex bg-gray-200 rounded-md p-2 my-2 border shadow">
                         <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Twitter Link')}}</p>
                         <input class="form-control ms-sm-auto w-sm-70 w-40" type="text"
-                               value="{{$user->twitter}}" >
+                               wire:model="social.telegram" >
                     </div>
                 </div>
             </div>
@@ -40,16 +34,12 @@
                             <h5 class="mb-0">{{ __('Twitter')}}</h5>
                         </div>
                     </div>
-                    <p class="text-sm text-secondary ms-auto me-3 my-auto">Enabled</p>
-                    <div class="form-check form-switch my-auto">
-                        <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault1">
-                    </div>
                 </div>
                 <div class="pt-2">
                     <div class="flex bg-gray-200 rounded-md p-2 my-2 border shadow">
                         <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Twitter Link')}}</p>
                         <input class="form-control ms-sm-auto w-sm-70 w-40" type="text"
-                               value="{{$user->twitter}}" >
+                               wire:model="social.twitter" >
                     </div>
                 </div>
             </div>
@@ -63,15 +53,11 @@
                             <h5 class="mb-0">{{ __('LinkedIn')}}</h5>
                         </div>
                     </div>
-                    <p class="text-sm text-secondary ms-auto me-3 my-auto">Enabled</p>
-                    <div class="form-check form-switch my-auto">
-                        <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault1">
-                    </div>
                 </div>
                 <div class="pt-2">
                     <div class="flex bg-gray-200 rounded-md p-2 my-2 border shadow">
                         <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('LinkedIn Link')}}</p>
-                        <input class="form-control ms-sm-auto w-sm-70 w-40" type="text" value="{{$user->linkedIn}}" >
+                        <input class="form-control ms-sm-auto w-sm-70 w-40" type="text" wire:model="social.linkedIn" >
                     </div>
                 </div>
             </div>
@@ -86,15 +72,11 @@
                             <h5 class="mb-0">{{ __('Facebook')}}</h5>
                         </div>
                     </div>
-                    <p class="text-sm text-secondary ms-auto me-3 my-auto">Enabled</p>
-                    <div class="form-check form-switch my-auto">
-                        <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault3">
-                    </div>
                 </div>
                 <div class="pt-2">
                     <div class="flex bg-gray-200 rounded-md p-2 my-2 border shadow">
                         <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Facebook Link')}}</p>
-                        <input class="form-control ms-sm-auto w-sm-70 w-40" type="text" value="{{$user->facebook}}" >
+                        <input class="form-control ms-sm-auto w-sm-70 w-40" type="text" wire:model="social.facebook" >
                     </div>
                 </div>
             </div>
@@ -108,15 +90,11 @@
                             <h5 class="mb-0">{{ __('Instagram')}}</h5>
                         </div>
                     </div>
-                    <p class="text-sm text-secondary ms-auto me-3 my-auto">Enabled</p>
-                    <div class="form-check form-switch my-auto">
-                        <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault3">
-                    </div>
                 </div>
                 <div class="pt-2">
                     <div class="flex bg-gray-200 rounded-md p-2 my-2 border shadow">
                         <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Instagram Link')}}</p>
-                        <input class="form-control ms-sm-auto w-sm-70 w-40" type="text" value="{{$user->instagram}}" >
+                        <input class="form-control ms-sm-auto w-sm-70 w-40" type="text" wire:model="social.instagram" >
                     </div>
                 </div>
             </div>
@@ -130,15 +108,12 @@
                             <h5 class="mb-0">{{ __('Website')}}</h5>
                         </div>
                     </div>
-                    <p class="text-sm text-secondary ms-auto me-3 my-auto">Enabled</p>
-                    <div class="form-check form-switch my-auto">
-                        <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault3">
-                    </div>
+
                 </div>
                 <div class="pt-2">
                     <div class="flex bg-gray-200 rounded-md p-2 my-2 border shadow">
                         <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Website Link')}}</p>
-                        <input class="form-control ms-sm-auto w-sm-70 w-40" type="text" value="{{$user->website}}">
+                        <input class="form-control ms-sm-auto w-sm-70 w-40" type="text" wire:model="social.website">
                     </div>
                 </div>
             </div>
@@ -152,28 +127,22 @@
                             <h5 class="mb-0">{{ __('Youtube')}}</h5>
                         </div>
                     </div>
-                    <p class="text-sm text-secondary ms-auto me-3 my-auto">Enabled</p>
-                    <div class="form-check form-switch my-auto">
-                        <input class="form-check-input" checked type="checkbox" id="flexSwitchCheckDefault3">
-                    </div>
                 </div>
                 <div class="pt-2">
                     <div class="flex bg-gray-200 rounded-md p-2 my-3 border shadow">
-                        <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Youtbe Link')}}</p>
+                        <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Youtube Chanel link')}}</p>
                         <input class="form-control ms-sm-auto w-sm-70 w-40" type="text"
-                               value="{{$user->youtube}}" >
+                               wire:model="social.youtube_chanel" >
                     </div>
                     <div class="flex bg-gray-200 rounded-md p-2 my-3 border shadow">
-                        <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Youtbe Link')}}</p>
+                        <p class="text-sm font-weight-bold my-auto ps-sm-2">{{ __('Youtube Username')}}</p>
                         <input class="form-control ms-sm-auto w-sm-70 w-40" type="text"
-                               value="{{$user->youtube}}" >
+                               wire:model="social.youtube_username" >
                     </div>
                 </div>
             </div>
            </div>
-            <div class="flex items-end">
-                <button type="submit" class="btn bg-gradient-success me-auto">Save</button>
-            </div>
-        </form>
+        <button type="submit" class="btn bg-gradient-success float-end mb-2">{{ __('Update Social media accounts') }}</button>
     </div>
+    </form>
 </div>
