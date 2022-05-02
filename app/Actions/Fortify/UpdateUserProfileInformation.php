@@ -20,12 +20,15 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
     {
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255'],
+            'username' => ['required', 'string', 'max:255', Rule::unique('users')->ignore($user->id)],
             'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
             'photo' => ['nullable', 'mimes:jpg,jpeg,png', 'max:1024'],
-            'phone' => ['nullable', 'numeric'],
+            'phone' => ['nullable', 'numeric', Rule::unique('users')->ignore($user->id)],
             'about_me' => ['nullable', 'string'],
+            'reputation' => ['nullable', 'numeric'],
             'tradingViewId' => ['nullable', 'string'],
+            'published' => ['nullable', 'boolean'],
+            'active' => ['nullable', 'boolean'],
         ])->validateWithBag('updateProfileInformation');
 
         if (isset($input['photo'])) {
@@ -42,6 +45,9 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
                 'email' => $input['email'],
                 'phone' => $input['phone'],
                 'about_me' => $input['about_me'],
+                'reputation' => $input['reputation'],
+                'published' => $input['published'],
+                'active' => $input['active'],
                 'tradingViewId' => $input['tradingViewId'],
             ])->save();
         }
