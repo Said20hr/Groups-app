@@ -18,10 +18,6 @@
                 </div>
             </div>
         </div>
-        <div class="flex">
-            <span class="badge badge-{{$user->active == 1 ? 'success' : 'danger'}} badge text-xl mx-4">
-                {{$user->active == 1 ? 'Active' : 'Not active'}}
-            </span>
-        </div>
+
     </div>
 </div>

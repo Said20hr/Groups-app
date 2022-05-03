@@ -5,9 +5,9 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-md-7 mx-auto text-center">
-                        <h1 class="display-1 text-bolder text-white fadeIn1 fadeInBottom mt-5">Error 500</h1>
-                        <h2 class="fadeIn3 fadeInBottom mt-3 text-white">Something went wrong</h2>
-                        <p class="lead fadeIn2 fadeInBottom text-white">We suggest you to go to the homepage while we solve this issue.</p>
+                        <h1 class="display-1 text-bolder text-white fadeIn1 fadeInBottom mt-5">Error 403</h1>
+                        <h2 class="fadeIn3 fadeInBottom mt-3 text-white">Access denied</h2>
+                        <p class="lead fadeIn2 fadeInBottom text-white">We suggest you to go to the homepage, you don't have permission to access to this page.</p>
                         <a href="{{url('/')}}" class="btn bg-gradient-warning mt-4 fadeIn2 fadeInBottom">Go to Homepage</a>
                     </div>
                 </div>

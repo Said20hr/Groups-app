@@ -63,7 +63,7 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!--====== Main js ======-->
 <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-<script src="{{asset('dashboards/assets/js/argon-dashboard.min.js?v=2.0.0')}}"></script>
+<script src="{{asset('dashboards/assets/js/argon-dashboard.js')}}"></script>
 
 
 </body>

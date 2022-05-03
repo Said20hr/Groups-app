@@ -45,6 +45,7 @@ class UpdateProfileInformationForm extends Component
      */
     public function updateProfileInformation(UpdatesUserProfileInformation $updater)
     {
+
         $this->resetErrorBag();
 
         $updater->update(
@@ -55,12 +56,12 @@ class UpdateProfileInformationForm extends Component
         );
 
         if (isset($this->photo)) {
-            return redirect()->route('profile.show');
+            return redirect()->route('admin.users.edit',$this->user->id);
         }
 
         $this->emit('saved');
 
-        $this->emit('refresh-navigation-menu');
+
     }
 
     /**
@@ -72,7 +73,7 @@ class UpdateProfileInformationForm extends Component
     {
         $this->user->deleteProfilePhoto();
 
-        $this->emit('refresh-navigation-menu');
+
     }
 
     /**

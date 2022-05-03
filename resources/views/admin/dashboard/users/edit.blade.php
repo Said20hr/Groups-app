@@ -1,5 +1,13 @@
 <x-layouts.admin>
-  <div class="container-fluid my-6 py-2">
+  <div class="container-fluid my-2 py-2">
+      <div class="flex mb-3">
+          <div class="w-1/2">
+              <h4 class="text-white">{{__('Edit User')}}</h4>
+          </div>
+          <div class="w-1/2 text-right d-flex flex-column justify-content-center">
+              <a href="{{route('admin.users.index')}}" class="btn btn-outline-white  ms-lg-auto me-lg-0 me-auto mt-lg-0 mt-2">{{__('Back')}}</a>
+          </div>
+      </div>
       <div class="row mb-5">
         <div class="col-lg-3">
           <div class="card position-sticky top-1 border">
