@@ -29,6 +29,7 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link id="pagestyle" href="{{asset('dashboards/assets/css/argon-dashboard.css?v=2.0.0')}}" rel="stylesheet" />
+
     <!-- Styles -->
 
     @livewireStyles
@@ -38,24 +39,11 @@
 
 <body class="g-sidenav-show bg-gray-100">
 
+ {{ $slot }}
 
-
-    <div class="min-height-300 bg-dark position-absolute w-100"></div>
-    <x-includes.admin.navs.sidebar/>
-
-    <main class="main-content position-relative border-radius-sm ">
-        <x-includes.admin.navs.navbar/>
-        {{ $slot }}
-        <x-includes.admin.navs.footer/>
-    </main>
-
-
-
-
-
-    @stack('js')
+@stack('js')
 @livewireScripts
-    <!--====== Jquery js ======-->
+<!--====== Jquery js ======-->
 <script src="{{asset('dashboards/assets/js/core/popper.min.js')}}"></script>
 <script src="{{asset('dashboards/assets/js/core/bootstrap.min.js')}}"></script>
 <script src="{{asset('dashboards/assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
@@ -65,6 +53,6 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!--====== Main js ======-->
 <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-<script src="{{asset('dashboards/assets/js/argon-dashboard.js')}}"></script>
+
 </body>
 </html>

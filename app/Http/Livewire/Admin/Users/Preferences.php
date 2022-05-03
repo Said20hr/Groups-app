@@ -10,7 +10,7 @@ class Preferences extends Component
 {
     protected $listeners = ['savedActive' => '$refresh'];
     public User $user;
-    public $state = [];
+    public $reason = null;
 
     public function mount($user)
     {
@@ -18,7 +18,10 @@ class Preferences extends Component
     }
     public function deactivate()
     {
-        $this->user->update(['active' => !$this->user->active]);
+        $this->user->update([
+            'active' => !$this->user->active,
+            'raison_deactivated' => $this->reason,
+            ]);
         $this->emit('savedActive');
         if($this->user->active)
         {

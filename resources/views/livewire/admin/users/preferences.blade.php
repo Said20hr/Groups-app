@@ -1,4 +1,20 @@
 <div class="card mt-4  card-body border border-secondary shadow" id="preferences">
+    <div class="p-3 @if(!$user->active) pb-0 @endif">
+        <div class="row align-items-center @if(!$user->active) mb-3 @endif">
+            <div class="col-9">
+                @if(!$user->active)
+                    <h5 class="mb-1">{{__('Deactivate reason')}}:</h5>
+                @endif
+            </div>
+        </div>
+        <p> {{$user->raison_deactivated}}</p>
+        <ul class="list-unstyled mx-auto">
+            <li class="d-flex">
+                <p class="mb-0">Account preferences:</p>
+                <span class="badge badge-{{$user->active == 1 ? 'success' : 'danger'}} ms-auto"> {{$user->active == 1 ? 'Active' : 'Not active'}}</span>
+            </li>
+        </ul>
+    </div>
     @if($user->role_id != 1)
         @if($user->active)
             <div class="border rounded-lg mb-3">
@@ -6,26 +22,35 @@
                     <h5 class="text-indigo-800">{{__('Deactivate Account')}}</h5>
                     <p class="text-sm mb-0">{{__('Press on confirm to un active account.')}}</p>
                 </div>
-                <div class="card-body d-flex pt-0" x-data="{ open: false }">
-                    <div class="d-flex align-items-center" >
-                        <div>
-                            <div class="form-check form-switch mb-0">
-                                <input class="form-check-input" x-model="confirm" type="checkbox" id="flexSwitchCheckDefault1" x-on:click="open = ! open"
-                                       x-data="{ confirm: false, timeout: null }"
-                                       x-init="@this.on('savedActive', () => { clearTimeout(timeout);confirm = false;open = false; shown = true; timeout = setTimeout(() => { shown = false }, 2000);  })"
-                                >
+                <div class="card-body pt-0" x-data="{ open: false }">
+                    <form wire:submit.prevent="deactivate">
+                        <div class="flex">
+                            <div class="d-flex align-items-center" >
+                                <div>
+                                <div class="form-check form-switch mb-0">
+                                    <input class="form-check-input" x-model="confirm" type="checkbox" id="flexSwitchCheckDefault1" x-on:click="open = ! open"
+                                           x-data="{ confirm: false, timeout: null }"
+                                           x-init="@this.on('savedActive', () => { clearTimeout(timeout);confirm = false;open = false; shown = true; timeout = setTimeout(() => { shown = false }, 2000);  })">
+                                </div>
                             </div>
+                                <div class="ms-2">
+                                    <span class="text-dark font-weight-bold d-block text-sm">{{__('Confirm')}}</span>
+                                    <span class="text-xs d-block">{{__('I want to make inactive this User Account.')}}</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-secondary mb-0 ms-auto"
+                                type="submit" name="button" x-show="open" style="display: none">
+                                {{__('Deactivate')}} <i class="lni lni-warning text-secondary mx-1"></i>
+                            </button>
                         </div>
-                        <div class="ms-2">
-                            <span class="text-dark font-weight-bold d-block text-sm">{{__('Confirm')}}</span>
-                            <span class="text-xs d-block">{{__('I want to make inactive this User Account.')}}</span>
+                        <div class="mb-4"  x-show="open" style="display: none">
+                            <label class="form-label mt-4">{{ __('Reason')}}</label>
+                            <textarea id="reason" wire:model.defer="reason" class="form-control" placeholder="{{ __('reason for deactivate')}}"></textarea>
+                            <x-jet-input-error for="reason" class="mt-2" />
                         </div>
-                    </div>
-                    <button class="btn btn-outline-secondary mb-0 ms-auto"
-                            type="button" wire:click="deactivate()" name="button" x-show="open" style="display: none">
-                        {{__('Deactivate')}} <i class="lni lni-warning text-secondary mx-1"></i>
-                    </button>
+                    </form>
                 </div>
+
             </div>
         @else
             <div class="border rounded-lg mb-3">
@@ -39,8 +64,7 @@
                             <div class="form-check form-switch mb-0">
                                 <input class="form-check-input" x-model="confirm" type="checkbox" id="flexSwitchCheckDefault1" x-on:click="open = ! open"
                                        x-data="{ confirm: false, timeout: null }"
-                                       x-init="@this.on('savedActive', () => { clearTimeout(timeout);open = false;  confirm = false; shown = true; timeout = setTimeout(() => { shown = false }, 2000);  })"
-                                >
+                                       x-init="@this.on('savedActive', () => { clearTimeout(timeout);open = false;  confirm = false; shown = true; timeout = setTimeout(() => { shown = false }, 2000);  })">
                             </div>
                         </div>
                         <div class="ms-2">

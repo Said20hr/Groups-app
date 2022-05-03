@@ -2,7 +2,8 @@
 
 namespace App\Http;
 
-use App\Http\Middleware\checkrole;
+use App\Http\Middleware\Blocked;
+use App\Http\Middleware\Checkrole;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -64,6 +65,8 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'role' =>checkrole::class
+        'role' =>Checkrole::class,
+        'blocked' => Blocked::class,
+
     ];
 }

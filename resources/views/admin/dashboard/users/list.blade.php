@@ -50,7 +50,7 @@
                 <table class="table table-flush" id="products-list">
                   <thead class="thead-light">
                     <tr>
-                        <th class="ps-3">{{ __('ID')}}</th>
+                        <th class="ps-1">{{ __('ID')}}</th>
                         <th class="ps-3">{{ __('Full name')}}</th>
                         <th class="ps-3">{{ __('Username')}}</th>
                         <th class="ps-3">{{ __('Email')}}</th>
@@ -72,10 +72,10 @@
                         <td class="pr-3">
                           <div class="items-center">
                             <img class="icon icon-md rounded-full object-cover"  src="{{$user->profile_photo_url }}" alt="{{ $user->name}}">
-                            <span class="my-2 ml-2 font-medium text-sm">{{ $user->name}} </span>
+                            <span class="my-2 ml-2 font-medium text-xs">{{ $user->name}} </span>
                           </div>
                         </td>
-                        <td><p class="my-2 text-sm">{{ $user->username  }}</p></td>
+                        <td><p class="my-2 text-xs">{{ $user->username  }}</p></td>
                         <td><p class="my-2 text-xs">{{ $user->email }}</p></td>
                         <td>
                             @if($user->telegram)

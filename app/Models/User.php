@@ -29,7 +29,7 @@ class User extends Authenticatable
         'name', 'email', 'password',
         'username', 'phone','role_id','provider_id','last_seen','active',
         'about_me','reputation','published','followers','following',
-        'tradingViewId','company','location','street','city',
+        'tradingViewId','company','location','street','city','raison_deactivated',
         'state','country','twitter','linkedIn','telegram','facebook',
         'instagram','website','youtube_chanel','youtube_username',
         ];
