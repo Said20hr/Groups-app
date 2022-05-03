@@ -26,7 +26,7 @@ class checkrole
         }
         if ($role == 'normal' && auth()->user()->role->id != 3)
         {
-            abort(403);
+            return redirect()->route('admin.dashboard');
         }
         return $next($request);
     }

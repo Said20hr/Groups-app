@@ -21,7 +21,7 @@
                     <form method="POST" action="{{ route('logout') }}"  >
                         @csrf
                         <button type="submit" class="nav-link">
-                            <span class="hover:text-gray-500 hover:border text-white bg-indigo-900 rounded-lg p-2">
+                            <span class="hover:text-gray-500 hover:border text-white bg-indigo-900 rounded-lg py-2 px-3">
                                 <i class="fa fa-user me-sm-1"></i> {{ __('Sign Out') }}
                             </span>
                         </button>

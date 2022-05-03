@@ -8,12 +8,26 @@ use Livewire\Component;
 
 class Preferences extends Component
 {
+    protected $listeners = ['savedActive' => '$refresh'];
     public User $user;
     public $state = [];
+
     public function mount($user)
     {
-        $this->state = Auth::user()->withoutRelations()->toArray();
         $this->user = $user;
+    }
+    public function deactivate()
+    {
+        $this->user->update(['active' => !$this->user->active]);
+        $this->emit('savedActive');
+        if($this->user->active)
+        {
+            $this->emit('activated');
+        }
+        else
+        {
+            $this->emit('deactivated');
+        }
     }
     public function render()
     {

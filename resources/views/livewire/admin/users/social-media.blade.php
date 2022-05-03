@@ -145,4 +145,11 @@
         <button type="submit" class="btn bg-gradient-success float-end mb-2">{{ __('Update Social media accounts') }}</button>
     </div>
     </form>
+    <div x-data="{ shown: false, timeout: 600 }"
+         x-init="@this.on('saved', () => { clearTimeout(timeout); shown = true; timeout = setTimeout(() => { shown = false }, 2000);  })"
+         x-show.transition.out.opacity.duration.1500ms="shown"
+         x-transition:leave.opacity.duration.1500ms
+         style="display: none;" class="m-3 text-lg alert alert-primary py-2 text-white">
+        Social media accounts successfully Updated
+    </div>
 </div>

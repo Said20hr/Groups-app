@@ -12,7 +12,7 @@ class TwoFactorauth extends Component
     public $state = [];
     public function mount($user)
     {
-        $this->state = Auth::user()->withoutRelations()->toArray();
+        $this->state = $user->withoutRelations()->toArray();
         $this->user = $user;
     }
     public function render()

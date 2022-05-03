@@ -23,26 +23,36 @@
     <link href="{{asset('dashboards/assets/css/nucleo-icons.css')}}" rel="stylesheet" />
     <link href="{{asset('dashboards/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
     <!-- Font Awesome Icons -->
+    <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <link href="{{asset('dashboards/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
     <!-- CSS Files -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <link id="pagestyle" href="{{asset('dashboards/assets/css/argon-dashboard.css?v=2.0.0')}}" rel="stylesheet" />
     <!-- Styles -->
+
     @livewireStyles
 </head>
 
 
 
 <body class="g-sidenav-show bg-gray-100">
-<div class="min-height-300 bg-dark position-absolute w-100"></div>
-<x-includes.admin.navs.sidebar/>
+
+
+@guest
+    {{ $slot }}
+@endguest
+@auth
+    <div class="min-height-300 bg-dark position-absolute w-100"></div>
+    <x-includes.admin.navs.sidebar/>
 
     <main class="main-content position-relative border-radius-sm ">
-    <x-includes.admin.navs.navbar/>
-    {{ $slot }}
+        <x-includes.admin.navs.navbar/>
+        {{ $slot }}
         <x-includes.admin.navs.footer/>
-</main>
+    </main>
+@endauth
+
 
 
 
