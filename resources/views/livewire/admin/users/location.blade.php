@@ -14,7 +14,7 @@
                 </div>
                 <div class="lg:w-1/2 pr-4">
                     <label class="form-label mt-4">{{ __('Location')}}</label>
-                    <input id="street" wire:model.defer="location.location" class="form-control" placeholder="{{ __('Location')}}" type="text" >
+                    <input id="location" wire:model.defer="location.location" class="form-control" placeholder="{{ __('Location')}}" type="text" >
                     <x-jet-input-error for="location.location" class="mt-2" />
                 </div>
                 <div class="lg:w-1/2 pr-4">
@@ -29,7 +29,7 @@
                 </div>
                 <div class="lg:w-1/2 pr-4">
                     <label class="form-label mt-4">{{ __('State')}}</label>
-                    <input id="city" wire:model.defer="location.state" class="form-control" placeholder="{{ __('State')}}" type="text">
+                    <input id="state" wire:model.defer="location.state" class="form-control" placeholder="{{ __('State')}}" type="text">
                     <x-jet-input-error for="location.state" class="mt-2" />
                 </div>
                 <div class="lg:w-1/2 pr-4">
@@ -47,4 +47,11 @@
             <button type="submit" class="btn bg-gradient-success float-end mt-4 mb-2 mx-3">{{ __('Update location') }}</button>
         </div>
     </form>
+    <div x-data="{ shown: false, timeout: 600 }"
+         x-init="@this.on('saved', () => { clearTimeout(timeout); shown = true; timeout = setTimeout(() => { shown = false }, 2000);  })"
+         x-show.transition.out.opacity.duration.1500ms="shown"
+         x-transition:leave.opacity.duration.1500ms
+         style="display: none;" class="m-3 text-lg alert alert-primary py-2 text-white">
+        Location successfully Updated
+    </div>
 </div>

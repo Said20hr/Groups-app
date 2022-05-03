@@ -22,25 +22,13 @@ Route::get('/on', function () {
 
 
 Route::middleware(
-    ['auth:sanctum', config('jetstream.auth_session'), 'verified']
+    ['auth:sanctum', config('jetstream.auth_session'), 'verified','role:normal']
 )->group(function () {
-    Route::get('/dashboard', function () {
-        return view('client.dashboard');
-    })->name('dashboard');
-    Route::get('/statistics', function () {
-        return view('client.statistics');
-    })->name('statistics');
-    Route::get('/groups/all', function () {
-        return view('client.groups.all');
-    })->name('groups.all');
-    Route::get('user/groups/free', function () {
-        return view('client.groups.all');
-    })->name('groups.free');
-    Route::get('user/groups/premium', function () {
-        return view('client.groups.all');
-    })->name('groups.premium');
-
-
+    Route::get('/dashboard', function () {return view('client.dashboard');})->name('dashboard');
+    Route::get('/statistics', function () {return view('client.statistics');})->name('statistics');
+    Route::get('/groups/all', function () {return view('client.groups.all');})->name('groups.all');
+    Route::get('user/groups/free', function () {return view('client.groups.all');})->name('groups.free');
+    Route::get('user/groups/premium', function () {return view('client.groups.all');})->name('groups.premium');
 });
 
 
@@ -70,3 +58,4 @@ Route::group(
 
     }
 );
+require_once __DIR__ . '/jetstream.php';

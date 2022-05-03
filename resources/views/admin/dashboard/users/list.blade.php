@@ -50,15 +50,15 @@
                 <table class="table table-flush" id="products-list">
                   <thead class="thead-light">
                     <tr>
-                        <th>{{ __('ID')}}</th>
-                        <th>{{ __('Full name')}}</th>
-                        <th>{{ __('Username')}}</th>
-                        <th>{{ __('Email')}}</th>
-                        <th>{{ __('Telegram')}}</th>
-                        <th>{{ __('Reputation')}}</th>
-                        <th>{{ __('Trading ID')}}</th>
-                        <th>{{ __('Status')}}</th>
-                        <th>{{ __('Action')}}</th>
+                        <th class="ps-3">{{ __('ID')}}</th>
+                        <th class="ps-3">{{ __('Full name')}}</th>
+                        <th class="ps-3">{{ __('Username')}}</th>
+                        <th class="ps-3">{{ __('Email')}}</th>
+                        <th class="ps-3">{{ __('Telegram')}}</th>
+                        <th class="ps-3">{{ __('Reputation')}}</th>
+                        <th class="ps-3">{{ __('Trading ID')}}</th>
+                        <th class="ps-3">{{ __('Status')}}</th>
+                        <th class="ps-3">{{ __('Action')}}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -70,14 +70,20 @@
                                     {{ $user->id }}</p></a>
                         </td>
                         <td class="pr-3">
-                          <div class="d-flex">
-                            <img class="icon icon-sm rounded-full object-cover" src="{{$user->profile_photo_url }}" alt="hoodie">
-                            <h6 class="my-2 ml-2 font-medium text-sm">{{ $user->name}} </h6>
+                          <div class="items-center">
+                            <img class="icon icon-md rounded-full object-cover"  src="{{$user->profile_photo_url }}" alt="{{ $user->name}}">
+                            <span class="my-2 ml-2 font-medium text-sm">{{ $user->name}} </span>
                           </div>
                         </td>
                         <td><p class="my-2 text-sm">{{ $user->username  }}</p></td>
                         <td><p class="my-2 text-xs">{{ $user->email }}</p></td>
-                        <td><p class="my-2 text-sm">{{ $user->telegram }}</p></td>
+                        <td>
+                            @if($user->telegram)
+                                <a class="btn btn-twitter btn-simple mb-0 ps-1 pe-2 py-0" href="{{$user->telegram}}" target="_blank">
+                                    <i class="fab fa-telegram fa-lg"></i>
+                                </a>
+                            @endif
+                        </td>
                         <td><p class="my-2 text-sm">{{ $user->reputation }}</p></td>
                         <td><p class="my-2 text-sm">{{ $user->tradingViewId }}</p></td>
                         <td>

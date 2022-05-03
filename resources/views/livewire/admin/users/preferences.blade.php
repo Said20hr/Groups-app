@@ -1,27 +1,95 @@
 <div class="card mt-4  card-body border border-secondary shadow" id="preferences">
-    <div class="card-header">
-        <h5>Delete Account</h5>
-        <p class="text-sm mb-0">Once you delete This account, there is no going back. Please be certain.
-        </p>
-    </div>
-    <div class="card-body d-flex pt-0" x-data="{ open: false }">
-        <div class="d-flex align-items-center" >
-            <div>
-                <div class="form-check form-switch mb-0">
-                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
-                           x-on:click="open = ! open">
+    @if($user->role_id != 1)
+        @if($user->active)
+            <div class="border rounded-lg mb-3">
+                <div class="card-header">
+                    <h5 class="text-indigo-800">{{__('Deactivate Account')}}</h5>
+                    <p class="text-sm mb-0">{{__('Press on confirm to un active account.')}}</p>
+                </div>
+                <div class="card-body d-flex pt-0" x-data="{ open: false }">
+                    <div class="d-flex align-items-center" >
+                        <div>
+                            <div class="form-check form-switch mb-0">
+                                <input class="form-check-input" x-model="confirm" type="checkbox" id="flexSwitchCheckDefault1" x-on:click="open = ! open"
+                                       x-data="{ confirm: false, timeout: null }"
+                                       x-init="@this.on('savedActive', () => { clearTimeout(timeout);confirm = false;open = false; shown = true; timeout = setTimeout(() => { shown = false }, 2000);  })"
+                                >
+                            </div>
+                        </div>
+                        <div class="ms-2">
+                            <span class="text-dark font-weight-bold d-block text-sm">{{__('Confirm')}}</span>
+                            <span class="text-xs d-block">{{__('I want to make inactive this User Account.')}}</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-secondary mb-0 ms-auto"
+                            type="button" wire:click="deactivate()" name="button" x-show="open" style="display: none">
+                        {{__('Deactivate')}} <i class="lni lni-warning text-secondary mx-1"></i>
+                    </button>
                 </div>
             </div>
-            <div class="ms-2">
-                <span class="text-dark font-weight-bold d-block text-sm">Confirm</span>
-                <span class="text-xs d-block">I want to delete this User Account.</span>
+        @else
+            <div class="border rounded-lg mb-3">
+                <div class="card-header">
+                    <h5 class="text-indigo-800">{{__('Activate Account')}}</h5>
+                    <p class="text-sm mb-0">{{__('Press on confirm to activate account.')}}</p>
+                </div>
+                <div class="card-body d-flex pt-0" x-data="{ open: false }">
+                    <div class="d-flex align-items-center" >
+                        <div>
+                            <div class="form-check form-switch mb-0">
+                                <input class="form-check-input" x-model="confirm" type="checkbox" id="flexSwitchCheckDefault1" x-on:click="open = ! open"
+                                       x-data="{ confirm: false, timeout: null }"
+                                       x-init="@this.on('savedActive', () => { clearTimeout(timeout);open = false;  confirm = false; shown = true; timeout = setTimeout(() => { shown = false }, 2000);  })"
+                                >
+                            </div>
+                        </div>
+                        <div class="ms-2">
+                            <span class="text-dark font-weight-bold d-block text-sm">{{__('Confirm')}}</span>
+                            <span class="text-xs d-block">{{__('I want to make Activate this User Account.')}}</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline-secondary mb-0 ms-auto" type="button"
+                            wire:click="deactivate()" name="button" x-show="open" style="display: none">
+                        {{__('Activate')}} <i class="lni lni-checkmark text-secondary mx-1"></i>
+                    </button>
+                </div>
             </div>
+        @endif
+            <div x-data="{ shown: false, timeout: 600 }"
+                 x-init="@this.on('activated', () => { clearTimeout(timeout); shown = true; timeout = setTimeout(() => { shown = false }, 2000);  })"
+                 x-show.transition.out.opacity.duration.1500ms="shown"
+                 x-transition:leave.opacity.duration.1500ms
+                 style="display: none;" class="mb-4 py-2 text-sm alert alert-success text-white">
+                Account successfully activated
+            </div>
+            <div x-data="{ shown: false, timeout: 600 }"
+                 x-init="@this.on('deactivated', () => { clearTimeout(timeout); shown = true; timeout = setTimeout(() => { shown = false }, 2000);  })"
+                 x-show.transition.out.opacity.duration.1500ms="shown"
+                 x-transition:leave.opacity.duration.1500ms
+                 style="display: none;" class="mb-4 py-2 text-sm alert alert-danger text-white">
+                Account successfully deactivated
+            </div>
+        <div class="border rounded-lg ">
+            <div class="card-header">
+            <h5 class="text-red-700">{{__('Delete Account')}}</h5>
+            <p class="text-sm mb-0">{{__('Once you delete This account, there is no going back. Please be certain.')}}
+            </p>
         </div>
-        <button class="btn btn-outline-secondary mb-0 ms-auto" type="button" name="button">Deactivate</button>
-        @if($user->role_id != 1)
+            <div class="card-body flex justify-between pt-0" x-data="{ open: false }">
+            <div class="d-flex align-items-center" >
+                <div>
+                    <div class="form-check form-switch mb-0">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" x-on:click="open = ! open">
+                    </div>
+                </div>
+                <div class="ms-2">
+                    <span class="text-dark font-weight-bold d-block text-sm">{{__('Confirm')}}</span>
+                    <span class="text-xs d-block">{{__('I want to delete this User Account.')}}</span>
+                </div>
+            </div>
             <button class="btn bg-gradient-danger mb-0 ms-2" type="button" name="button"
-                    x-show="open"  data-bs-toggle="modal" data-bs-target="#delete-{{$user->id}}">
-                Delete Account   <i class="fas fa-trash text-white mx-1"></i>
+                    x-show="open"  data-bs-toggle="modal" data-bs-target="#delete-{{$user->id}}" style="display:none;">
+                  {{__('Delete Account ')}}   <i class="fas fa-trash text-white mx-1"></i>
             </button>
             <div class="modal fade" id="delete-{{$user->id}}" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
                 <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
@@ -50,6 +118,16 @@
                     </form>
                 </div>
             </div>
-        @endif
-    </div>
+        </div>
+        </div>
+    @else
+        <div class="border rounded-md ">
+            <div class="card-header">
+                <h5>Admin Account preferences</h5>
+                <p class="text-sm mb-0">You cannot deactivate or delete admin account.
+                </p>
+            </div>
+        </div>
+    @endif
+
 </div>
