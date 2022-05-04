@@ -42,28 +42,13 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a data-bs-toggle="collapse" href="#applicationsExamples" class="nav-link {{ (request()->is('admin/sets*')) ? 'active' : ' ' }}"  aria-controls="applicationsExamples" role="button" aria-expanded="false">
+                <a  href="{{ route('admin.groups.index') }}" class="nav-link {{ (request()->is('admin/sets*')) ? 'active' : ' ' }}" >
                     <div class="icon icon-shape icon-sm bg-white text-center d-flex align-items-center justify-content-center">
                         <i class="ni ni-ui-04 text-info text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text text-white ms-3">Groups</span>
                 </a>
-                <div class="collapse {{ (request()->is('admin/sets*')) ? 'show' : '' }}" id="applicationsExamples">
-                    <ul class="nav ms-4">
-                        <li class="nav-item ">
-                            <a class="nav-link {{ (request()->is('admin/sets/groups')) ? 'text-white font-bold' : 'opacity-7 ' }} " href="{{ route('admin.groups.index') }}">
-                                <span class="sidenav-mini-icon"> L </span>
-                                <span class="sidenav-normal"> List </span>
-                            </a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link {{ (request()->is('admin/sets/overview')) ? 'text-white font-bold' : 'opacity-7' }}" href="{{ route('admin.groups.overview') }}">
-                                 <span class="sidenav-mini-icon"> O </span>
-                                <span class="sidenav-normal"> Overview </span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+
             </li>
             <li class="nav-item">
                 <a href="{{ route('admin.tickets.index') }}" class="nav-link {{ (request()->is('admin/tickets')) ? 'active' : '' }} ">

@@ -62,8 +62,9 @@
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach ($users as $user)
-                      <tr class="text-left">
+
+                      @foreach ($users as $user)
+                          <tr class="text-left">
                         <td>
                             <a href="{{ route('admin.users.show',$user->id) }}" >
                                 <p class="ms-3 my-2 text-sm" style="font-weight: bolder">
@@ -134,7 +135,8 @@
                         </div>
                         </td>
                       </tr>
-                    @endforeach
+                      @endforeach
+
                   </tbody>
                 </table>
               </div>
@@ -150,7 +152,9 @@
   <script src="{{asset('dashboards/assets/js/plugins/datatables.js')}}"></script>
 
 <!--====== Plugins js ======-->
+
  <script>
+
     if (document.getElementById('products-list')) {
       const dataTableSearch = new simpleDatatables.DataTable("#products-list", {
         searchable: true,
@@ -175,15 +179,6 @@
         });
       });
     };
-  </script>
-  <script>
-    var win = navigator.platform.indexOf('Win') > -1;
-    if (win && document.querySelector('#sidenav-scrollbar')) {
-      var options = {
-        damping: '0.5'
-      }
-      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-    }
   </script>
 @endpush
 </x-layouts.admin>

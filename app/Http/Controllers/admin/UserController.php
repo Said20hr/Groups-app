@@ -21,7 +21,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = User::with('role')->select('id','name','username','telegram','active','email','reputation','tradingViewId')->lazy(10);
+
         return view('admin.dashboard.users.list', compact('users'));
     }
 
@@ -98,6 +99,7 @@ class UserController extends Controller
        {
            return redirect()->back()->with('error', 'user Cannot be deleted');
        }
-       return redirect()->route('admin.users.index')->with('delete', 'User Has been deleted successfully');
+       return redirect()->route('admin.users.index')
+           ->with('success_message', array( 'deleted', 'User Has been deleted successfully'));
     }
 }

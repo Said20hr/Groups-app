@@ -43,7 +43,6 @@ Route::group(
     function () {
         Route::group(['prefix' => 'sets'], function () {
             Route::resource('groups',  \App\Http\Controllers\admin\GroupController::class);
-            Route::get('overview', [\App\Http\Controllers\admin\GroupController::class, 'overview'])->name('groups.overview');
         });
         Route::view('/', 'admin.dashboard.default')->name('dashboard');
         Route::resource('users', \App\Http\Controllers\admin\UserController::class);

@@ -91,12 +91,6 @@
 <!-- Kanban scripts -->
 <script>
 
-
-
-
-
-
-
     function visible() {
       var elem = document.getElementById('profileVisibility');
       if (elem) {

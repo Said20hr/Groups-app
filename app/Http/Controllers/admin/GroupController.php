@@ -14,12 +14,9 @@ class GroupController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard.groupes.list');
-    }
-    public function overview()
-    {
         return view('admin.dashboard.groupes.overview');
     }
+
 
     /**
      * Show the form for creating a new resource.

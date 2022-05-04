@@ -40,8 +40,8 @@
                     </a>
                 </li>
                 <li class="nav-item px-3 d-flex align-items-center">
-                    <a href="javascript:;" class="nav-link text-white p-0">
-                        <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
+                    <a href="{{route('admin.users.edit',auth()->user()->id)}}" class="nav-link text-white p-0">
+                        <i class="fa fa-cog fixed-plugin-button-nav hover:text-gray-200 cursor-pointer"></i>
                     </a>
                 </li>
                 <li class="nav-item dropdown pe-2 d-flex align-items-center">

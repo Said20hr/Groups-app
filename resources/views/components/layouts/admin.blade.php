@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="http://fonts.cdnfonts.com/css/effra" rel="stylesheet">
-
+    <script src="{{asset('dashboards/assets/js/plugins/sweetalert.min.js')}}"></script>
     <!--====== Slick CSS ======-->
     <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
@@ -40,7 +40,7 @@
 
 
 
-    <div class="min-height-300 bg-dark position-absolute w-100"></div>
+    <div class="min-height-300 bg-slate-800 position-absolute w-100"></div>
     <x-includes.admin.navs.sidebar/>
 
     <main class="main-content position-relative border-radius-sm ">
@@ -66,5 +66,26 @@
 <!--====== Main js ======-->
 <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="{{asset('dashboards/assets/js/argon-dashboard.js')}}"></script>
+
+    <script>
+        @if(session()->has('success_message'))
+
+        var customSweetAlert = {
+            showSwal: function (type) {
+                if (type == 'success-message') {
+                    Swal.fire(
+                        @foreach( Session::get('success_message') as $message)
+                            '{{$message}}',
+                        @endforeach
+                            'success'
+                    )
+                }
+            }
+        }
+        customSweetAlert.showSwal('success-message')
+        @endif
+
+    </script>
+
 </body>
 </html>

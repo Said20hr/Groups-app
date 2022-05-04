@@ -558,7 +558,7 @@
         </div>
       </footer>
   </div>
-  
+
   <div class="fixed-plugin">
     <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
       <i class="fa fa-cog py-2"> </i>
@@ -641,8 +641,6 @@
   </div>
 @push('js')
 <!-- Kanban scripts -->
-<script src="{{asset('dashboard/assets/js/plugins/dragula/dragula.min.js')}}"></script>
-<script src="{{asset('dashboard/assets/js/plugins/jkanban/jkanban.js')}}"></script>
 <script>
     if (document.getElementById('choices-gender')) {
       var gender = document.getElementById('choices-gender');
