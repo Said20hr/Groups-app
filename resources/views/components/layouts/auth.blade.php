@@ -37,10 +37,11 @@
 
 <body class="">
 
-<main class="main-content position-relative page-header min-vh-100" style="background-image: url('{{asset('assets/images/19333414.webp')}}');">
-    <span class="mask bg-gradient-dark opacity-6"></span>
+<div class="font-sans text-gray-900 antialiased">
+    <x-includes.preloader/>
+    @livewire('navigation-menu')
     {{ $slot }}
-</main>
+</div>
 
 
 
@@ -58,8 +59,6 @@
 <!--====== Main js ======-->
 <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="{{asset('dashboards/assets/js/argon-dashboard.min.js?v=2.0.0')}}"></script>
-<!-- Kanban scripts -->
-<script src="{{asset('dashboards/assets/js/plugins/dragula/dragula.min.js')}}"></script>
-<script src="{{asset('dashboards/assets/js/plugins/jkanban/jkanban.js')}}"></script>
+
 </body>
 </html>

@@ -12,7 +12,7 @@
                     <div class="card border">
                         <div class="card-body text-center">
                             <div class="info mb-4 mt-n6">
-                                <img class="avatar avatar-xxl shadow-lg border border-white" alt="Image placeholder" src="{{auth()->user()->profile_photo_url}}">
+                                <img class="avatar avatar-xxl shadow-lg border border-dark" alt="Image placeholder" src="{{auth()->user()->profile_photo_url}}">
                             </div>
                             <h3 class="mb-2 font-weight-bolder">{{auth()->user()->name}}</h3>
                             <h6 class="mb-2">{{auth()->user()->email}}</h6>

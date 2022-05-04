@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Auth;
 
 class Blocked
@@ -20,10 +21,15 @@ class Blocked
 
         if (auth()->check() && !auth()->user()->role_id != 1  )
         {
+
             Auth::user();
-            if (!Auth::user()->active )
+            if (!Auth::user()->active  )
             {
                 return  response()->view('errors.blocked');
+            }
+            else if(Auth::user()->phone == NULL )
+            {
+                return  response()->view('auth.onbroading');
             }
         }
 

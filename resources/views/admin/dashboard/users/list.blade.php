@@ -54,8 +54,8 @@
                         <th class="ps-3">{{ __('Full name')}}</th>
                         <th class="ps-3">{{ __('Username')}}</th>
                         <th class="ps-3">{{ __('Email')}}</th>
+                        <th class="ps-3">{{ __('Email verification')}}</th>
                         <th class="ps-3">{{ __('Telegram')}}</th>
-                        <th class="ps-3">{{ __('Reputation')}}</th>
                         <th class="ps-3">{{ __('Trading ID')}}</th>
                         <th class="ps-3">{{ __('Status')}}</th>
                         <th class="ps-3">{{ __('Action')}}</th>
@@ -78,20 +78,25 @@
                         </td>
                         <td><p class="my-2 text-xs">{{ $user->username  }}</p></td>
                         <td><p class="my-2 text-xs">{{ $user->email }}</p></td>
-                        <td>
-                            @if($user->telegram)
-                                <a class="btn btn-twitter btn-simple mb-0 ps-1 pe-2 py-0" href="{{$user->telegram}}" target="_blank">
-                                    <i class="fab fa-telegram fa-lg"></i>
-                                </a>
-                            @endif
-                        </td>
-                        <td><p class="my-2 text-sm">{{ $user->reputation }}</p></td>
-                        <td><p class="my-2 text-sm">{{ $user->tradingViewId }}</p></td>
-                        <td>
-                          <span class="badge {{ $user->active ? 'badge-success' : 'badge-danger' }} badge-sm ms-3 my-2">
-                              {{$user->active ? 'Active' : 'Inactive'}}
-                          </span>
-                        </td>
+                              <td>
+                                  <span class="badge {{ $user->email_verified_at ? 'badge-success' : 'badge-warning' }} badge-sm ms-3 my-2">
+                                      {{$user->email_verified_at ? 'verified' : 'Pending'}}
+                                  </span>
+                              </td>
+                              <td>
+                                  @if($user->telegram)
+                                      <a class="btn btn-twitter btn-simple mb-0 ps-1 pe-2 py-0" href="{{$user->telegram}}" target="_blank">
+                                          <i class="fab fa-telegram fa-lg"></i>
+                                      </a>
+                                  @endif
+                              </td>
+
+                              <td><p class="my-2 text-sm">{{ $user->tradingViewId }}</p></td>
+                              <td>
+                                  <span class="badge {{ $user->active ? 'badge-success' : 'badge-danger' }} badge-sm ms-3 my-2">
+                                      {{$user->active ? 'Active' : 'Inactive'}}
+                                  </span>
+                              </td>
                         <td>
                           <div class="flex my-2 text-sm">
                           <a class="mx-1" href="{{ route('admin.users.show',$user->id) }}" data-bs-toggle="tooltip" data-bs-original-title="Preview user">

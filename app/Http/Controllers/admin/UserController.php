@@ -21,7 +21,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::with('role')->select('id','name','username','telegram','active','email','reputation','tradingViewId')->lazy(10);
+        $users = User::with('role')->select('id','name','username','telegram','active','email','email_verified_at','tradingViewId')->lazy(10);
 
         return view('admin.dashboard.users.list', compact('users'));
     }

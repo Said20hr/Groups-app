@@ -12,14 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('/registration', \App\Http\Controllers\authController::class);
 Route::middleware('blocked')->group(
     function () {
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/on', function () {
-    return view('auth.onbroading');
-});
+Route::get('/', function () {return view('welcome');});
+
+
 
 
 Route::middleware(
@@ -31,7 +29,7 @@ Route::middleware(
     Route::get('user/groups/free', function () {return view('client.groups.all');})->name('groups.free');
     Route::get('user/groups/premium', function () {return view('client.groups.all');})->name('groups.premium');
 });
-
+        require_once __DIR__ . '/jetstream.php';
 });
 
 Route::group(
@@ -52,4 +50,4 @@ Route::group(
 
     }
 );
-require_once __DIR__ . '/jetstream.php';
+
