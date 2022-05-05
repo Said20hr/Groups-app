@@ -40,12 +40,16 @@
 
 
 <body class="g-sidenav-show bg-gray-100">
-
+@if(!\Illuminate\Support\Facades\Auth::user()->email_verified_at)
+    <x-includes.client.verify/>
+@endif
 <x-includes.client.sidebar/>
 
 <main class="main-content position-relative border-radius-xl bg-white ">
+
     <x-includes.client.navbar/>
     {{ $slot }}
+    <x-includes.admin.navs.footer/>
 </main>
 
 

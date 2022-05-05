@@ -15,10 +15,7 @@ use Illuminate\Support\Facades\Route;
 Route::resource('/registration', \App\Http\Controllers\authController::class);
 Route::middleware('blocked')->group(
     function () {
-Route::get('/', function () {return view('welcome');});
-
-
-
+Route::get('/', function () {return view('welcome');})->name('welcome');
 
 Route::middleware(
     ['auth:sanctum', config('jetstream.auth_session'), 'verified','role:normal']

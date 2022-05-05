@@ -49,7 +49,7 @@
                  x-transition:leave-start="opacity-100 transform scale-x-100 translate-x-0"
                  x-transition:leave-end="opacity-0 transform scale-x-0 -translate-x-1/2"
                  style="display: none">
-               Location
+                @livewire('client.location')
             </div>
             <div class="mt-3" x-show.duration.200s="item === 'social'"
                  transition:enter="transition ease-in-out duration-300"
@@ -59,7 +59,7 @@
                  x-transition:leave-start="opacity-100 transform scale-x-100 translate-x-0"
                  x-transition:leave-end="opacity-0 transform scale-x-0 -translate-x-1/2"
                  style="display: none">
-                Socail
+               @livewire('client.social')
             </div>
             @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::updatePasswords()))
                 <div class="mt-3" x-show.duration.200s="item === 'password'"

@@ -1,4 +1,4 @@
-<aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 fixed-start z-50" id="sidenav-main">
+<aside class="sidenav navbar bg-gray-100 navbar-vertical navbar-expand-xs border-0 fixed-start z-50" id="sidenav-main">
     <div class="">
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
         <div class="flex items-center justify-between pl-4 pr-3 py-4">
@@ -112,6 +112,14 @@
                         <i class="ni ni-air-baloon text-white text-sm opacity-10"></i>
                     </div>
                     <span class="nav-link-text ms-2">Help</span>
+                </a>
+            </li>
+            <li class="nav-item mb-1">
+                <a href="{{route('welcome')}}" class="nav-link ">
+                    <div class="icon icon-shape icon-sm text-center bg-emerald-600 d-flex align-items-center justify-content-center">
+                        <i class="ni ni-curved-next text-white text-sm opacity-10"></i>
+                    </div>
+                    <span class="nav-link-text ms-2">Website</span>
                 </a>
             </li>
             <li class="nav-item mb-1">

@@ -8,80 +8,79 @@
                             <div class="full-background" style="background-image: url('{{asset('dashboards/assets/img/img-1-1200x1000.jpg')}}')"></div>
                             <div class="card-body pt-4 text-center">
                                 <h6 class="text-white mb-0">Earnings</h6>
-                                <h3 class="text-white">$15,800</h3>
-                                <span class="badge d-block bg-gradient-dark mb-2">+15% since last week</span>
-                                <p>They're slowed down by their perception of themselves. </p>
-                                <a href="javascript:;" class="btn btn-outline-white btn-sm px-5 mb-0">View more</a>
+                                <h3 class="text-white">$0.00</h3>
+                                <span class="badge d-block bg-gradient-dark mb-2">+0% {{__('since last Month')}}</span>
+                                <p class="text-white">{{__('They are slowed down by their perception of themselves.')}} </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mt-4 mt-lg-0">
-                        <div class="card">
+                        <div class="card border shadow pb-2 rounded-lg">
                             <div class="card-body p-3">
                                 <div class="d-flex">
                                     <div class="numbers">
                                         <p class="text-sm mb-0 text-uppercase font-weight-bold">Today's Money</p>
-                                        <h5 class="font-weight-bolder mb-0">$87,000</h5>
+                                        <h5 class="font-weight-bolder mb-0">$0,00</h5>
                                     </div>
                                     <div class="icon icon-shape bg-gradient-dark text-center rounded-circle ms-auto">
                                         <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
                                     </div>
                                 </div>
                                 <p class="mb-0">
-                                    <span class="text-success text-sm font-weight-bolder">+12%</span>
+                                    <span class="text-success text-sm font-weight-bolder">+0%</span>
                                     since last month
                                 </p>
                             </div>
                         </div>
-                        <div class="card mt-4">
+                        <div class="card border shadow pb-2 rounded-lg mt-4">
                             <div class="card-body p-3">
                                 <div class="d-flex">
                                     <div class="numbers">
-                                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Sessions</p>
-                                        <h5 class="font-weight-bolder mb-0">9,600</h5>
+                                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Groups</p>
+                                        <h5 class="font-weight-bolder mb-0">0</h5>
                                     </div>
                                     <div class="icon icon-shape bg-gradient-dark text-center rounded-circle ms-auto">
                                         <i class="ni ni-planet text-lg opacity-10" aria-hidden="true"></i>
                                     </div>
                                 </div>
                                 <p class="mb-0">
-                                    <span class="text-success text-sm font-weight-bolder">+2%</span>
-                                    since yesterday
+                                    <span class="text-success text-sm font-weight-bolder">+0%</span>
+                                    since last month
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mt-4 mt-lg-0">
-                        <div class="card">
+                        <div class="card border shadow pb-2 rounded-lg">
                             <div class="card-body p-3">
                                 <div class="d-flex">
                                     <div class="numbers">
-                                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Today's Users</p>
-                                        <h5 class="font-weight-bolder mb-0">2,300</h5>
+                                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Today's analytics</p>
+                                        <h5 class="font-weight-bolder mb-0">23</h5>
                                     </div>
                                     <div class="icon icon-shape bg-gradient-dark text-center rounded-circle ms-auto">
                                         <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
                                     </div>
                                 </div>
                                 <p class="mb-0">
-                                    <span class="text-danger text-sm font-weight-bolder">-1%</span>
+                                    <span class="text-danger text-sm font-weight-bolder">0%</span>
                                     since last week
                                 </p>
                             </div>
                         </div>
-                        <div class="card mt-4">
+                        <div class="card border shadow pb-2 rounded-lg mt-4">
                             <div class="card-body p-3">
                                 <div class="d-flex">
                                     <div class="numbers">
-                                        <p class="text-sm mb-0 text-uppercase font-weight-bold">Sign-ups</p>
-                                        <h5 class="font-weight-bolder mb-0">348</h5>
+                                        <p class="text-sm mb-0 text-uppercase font-weight-bold">New users</p>
+                                        <h5 class="font-weight-bolder mb-0">0</h5>
                                     </div>
                                     <div class="icon icon-shape bg-gradient-dark text-center rounded-circle ms-auto">
                                         <i class="ni ni-shop text-lg opacity-10" aria-hidden="true"></i>
                                     </div>
                                 </div>
                                 <p class="mb-0">
-                                    <span class="text-success text-sm font-weight-bolder">+12%</span>
+                                    <span class="text-success text-sm font-weight-bolder">0%</span>
                                     since last quarter
                                 </p>
                             </div>
@@ -90,39 +89,32 @@
                 </div>
             </div>
             <div class="col-lg-4 col-12 mt-4 mt-lg-0">
-                <div class="card">
+                <div class="card border shadow h-100">
                     <div class="card-header p-3 pb-0">
                         <div class="row">
                             <div class="col-8 d-flex">
                                 <div>
-                                    <img src="{{asset('dashboards/assets/img/team-3.jpg')}}" class="avatar avatar-sm me-2" alt="avatar image">
+                                    <img src="{{auth()->user()->profile_photo_url}}" class="avatar avatar-sm me-2" alt="avatar image">
                                 </div>
                                 <div class="d-flex flex-column justify-content-center">
-                                    <h6 class="mb-0 text-sm">Lucas Prila</h6>
-                                    <p class="text-xs">2h ago</p>
+                                    <h6 class="mb-0 text-sm">{{auth()->user()->name}}</h6>
                                 </div>
                             </div>
                             <div class="col-4">
-                                <span class="badge bg-gradient-info ms-auto float-end">Recommendation</span>
+                                <span class="badge bg-gradient-info ms-auto float-end">{{ __('New User') }}</span>
                             </div>
                         </div>
                     </div>
                     <div class="card-body p-3 pt-1">
-                        <h6>I need a Ruby developer for my new website.</h6>
-                        <p class="text-sm">The website was initially built in PHP, I need a professional ruby programmer to shift it.</p>
-                        <div class="d-flex bg-gray-100 border-radius-lg p-3">
-                            <h4 class="my-auto">
-                                <span class="text-secondary text-sm me-1">$</span>3,000<span class="text-secondary text-sm ms-1">/ month </span>
-                            </h4>
-                            <a href="javascript:;" class="btn btn-outline-dark mb-0 ms-auto">Apply</a>
-                        </div>
+                        <h6>About me.</h6>
+                        <p class="text-sm">{{auth()->user()->about_me}}</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row mt-4">
             <div class="col-lg-8 col-12">
-                <div class="card">
+                <div class="card border border-secondary">
                     <div class="card-header p-3">
                         <div class="row">
                             <div class="col-md-6">
@@ -280,7 +272,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-12 mt-4 mt-lg-0">
-                <div class="card overflow-hidden">
+                <div class="card border border-secondary overflow-hidden">
                     <div class="card-header p-3 pb-0">
                         <div class="d-flex align-items-center">
                             <div class="icon icon-shape bg-gradient-info shadow text-center border-radius-md">
@@ -310,7 +302,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card overflow-hidden mt-4">
+                <div class="card border border-secondary overflow-hidden mt-4">
                     <div class="card-body p-3">
                         <div class="row">
                             <div class="col-lg-5">

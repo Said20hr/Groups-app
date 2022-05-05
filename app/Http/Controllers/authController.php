@@ -101,6 +101,9 @@ class authController extends Controller
             'youtube_chanel' =>'nullable|string|max:255',
             'youtube_username' =>'nullable|string|max:255',
         ]);
+
+       $user->update($request->all());
+       return redirect()->route('dashboard');
     }
 
     /**

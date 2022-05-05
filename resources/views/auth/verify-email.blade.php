@@ -9,14 +9,14 @@
                     </div>
 
 
-                @if (session('status') == 'verification-link-sent')
-                    <div class="mb-4 font-medium text-sm text-green-600">
-                        {{ __('A new verification link has been sent to the email address you provided during registration.') }}
-                    </div>
-                @endif
+                    @if (session('status') == 'verification-link-sent')
+                        <div class="mb-4 font-medium text-sm text-green-600">
+                            {{ __('A new verification link has been sent to the email address you provided during registration.') }}
+                        </div>
+                    @endif
 
 
-                    {{-- <form method="POST" action="{{ route('verification.send') }}"> --}}
+                    <form method="POST" action="{{ route('verification.send') }}">
                         @csrf
                         <div class="flex items-center justify-end">
                             <x-jet-button type="submit">
@@ -24,7 +24,7 @@
                             </x-jet-button>
                         </div>
                     </form>
-
+                </div>
                 <div class="mt-2 flex items-center justify-center">
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf

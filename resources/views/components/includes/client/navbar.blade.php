@@ -38,7 +38,7 @@
                     </a>
                 </li>
                 <li class="nav-item px-3 d-flex align-items-center">
-                    <a href="javascript:;" class="nav-link p-0">
+                    <a href="{{route('profile.show')}}" class="nav-link p-0">
                         <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer text-gray-600"></i>
                     </a>
                 </li>
@@ -46,7 +46,7 @@
                     <a href="javascript:;" class="nav-link p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa fa-bell cursor-pointer text-gray-600"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
+                    <ul class="dropdown-menu dropdown-menu-end bg-slate-200 px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
                         <li class="mb-2">
                             <a class="dropdown-item border-radius-md" href="javascript:;">
                                 <div class="d-flex py-1">

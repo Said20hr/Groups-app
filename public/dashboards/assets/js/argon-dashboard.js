@@ -419,7 +419,7 @@ function toggleNavLinksColor(type) {
 
     navLinksToggler.forEach(element => {
       element.classList.add('bg-dark')
-      element.classList.remove('bg-white')
+      element.classList.remove('bg-dark')
     });
   } else if (type === "transparent") {
     navLinks.forEach(element => {
@@ -428,7 +428,7 @@ function toggleNavLinksColor(type) {
 
     navLinksToggler.forEach(element => {
       element.classList.remove('bg-dark')
-      element.classList.add('bg-white')
+      element.classList.add('bg-dark')
     });
   }
 }

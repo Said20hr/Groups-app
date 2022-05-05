@@ -8,34 +8,34 @@
                 <div class="lg:w-1/2 pr-4">
                     <label class="form-label mt-4">{{ __('Company')}}</label>
                     <div class="input-group">
-                        <input id="company" wire:model.defer="location.company" placeholder="{{ __('Company')}}" class="form-control" type="text" }" required>
+                        <input id="company" wire:model.defer="location.company" placeholder="{{ __('Company')}}" class="text-dark form-control" type="text"  required>
                         <x-jet-input-error for="location.company" class="mt-2" />
                     </div>
                 </div>
                 <div class="lg:w-1/2 pr-4">
                     <label class="form-label mt-4">{{ __('Location')}}</label>
-                    <input id="location" wire:model.defer="location.location" class="form-control" placeholder="{{ __('Location')}}" type="text" >
+                    <input id="location" wire:model.defer="location.location" class="text-dark form-control" placeholder="{{ __('Location')}}" type="text" >
                     <x-jet-input-error for="location.location" class="mt-2" />
                 </div>
                 <div class="lg:w-1/2 pr-4">
                     <label class="form-label mt-4">{{ __('Street')}}</label>
-                    <input id="street" wire:model.defer="location.street" class="form-control" placeholder="{{ __('Street')}}" type="text" >
+                    <input id="street" wire:model.defer="location.street" class="text-dark form-control" placeholder="{{ __('Street')}}" type="text" >
                     <x-jet-input-error for="location.street" class="mt-2" />
                 </div>
                 <div class="lg:w-1/2 pr-4">
                     <label class="form-label mt-4">{{ __('City')}}</label>
-                    <input id="city" wire:model.defer="location.city" class="form-control" placeholder="{{ __('City')}}" type="text">
+                    <input id="city" wire:model.defer="location.city" class="text-dark form-control" placeholder="{{ __('City')}}" type="text">
                     <x-jet-input-error for="location.city" class="mt-2" />
                 </div>
                 <div class="lg:w-1/2 pr-4">
                     <label class="form-label mt-4">{{ __('State')}}</label>
-                    <input id="state" wire:model.defer="location.state" class="form-control" placeholder="{{ __('State')}}" type="text">
+                    <input id="state" wire:model.defer="location.state" class="text-dark form-control" placeholder="{{ __('State')}}" type="text">
                     <x-jet-input-error for="location.state" class="mt-2" />
                 </div>
                 <div class="lg:w-1/2 pr-4">
                     <label class="form-label mt-4">{{ __('Country')}}</label>
                     <div class="input-group">
-                        <select id="country" wire:model.defer="location.country" class="form-control">
+                        <select id="country" wire:model.defer="location.country" class="text-dark form-control">
                             @foreach($countries as $country)
                                 <option value="{{$country}}" @selected($country)>{{$country}}</option>
                             @endforeach
