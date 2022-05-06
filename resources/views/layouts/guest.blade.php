@@ -16,7 +16,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-
         <!--====== Slick CSS ======-->
         <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
         <link rel="stylesheet" href="{{asset('assets/css/magnific-popup.css')}}">
@@ -36,12 +35,11 @@
             <x-includes.preloader/>
             {{ $slot }}
         </div>
-
         <!--====== Jquery js ======-->
+
         <script src="{{asset('assets/js/vendor/jquery-3.5.1-min.js')}}"></script>
         <script src="{{asset('assets/js/vendor/modernizr-3.7.1.min.js')}}"></script>
         <script type="text/javascript" src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
-
         <script>
             var ddData = [
                 {
@@ -79,17 +77,17 @@
             });
         </script>
         <!--====== Plugins js ======-->
-        <script src="assets/js/plugins.js"></script>
+        <script src="{{asset('assets')}}/js/plugins.js"></script>
         <!--===== Slick js ======-->
-        <script src="assets/js/slick.min.js"></script>
+        <script src="{{asset('assets')}}/js/slick.min.js"></script>
         <!--====== Scrolling Nav js ======-->
-        <script src="assets/js/jquery.easing.min.js"></script>
-        <script src="assets/js/scrolling-nav.js"></script>
+        <script src="{{asset('assets')}}/js/jquery.easing.min.js"></script>
+        <script src="{{asset('assets')}}/js/scrolling-nav.js"></script>
         <!--====== wow js ======-->
-        <script src="assets/js/wow.min.js"></script>
+        <script src="{{asset('assets')}}/js/wow.min.js"></script>
         <!--====== Particles js ======-->
-        <script src="assets/js/particles.min.js"></script>
+        <script src="{{asset('assets')}}/js/particles.min.js"></script>
         <!--====== Main js ======-->
-        <script src="assets/js/main.js"></script>
+        <script src="{{asset('assets')}}/js/main.js"></script>
     </body>
 </html>
