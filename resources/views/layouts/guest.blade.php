@@ -67,12 +67,13 @@
                     imageSrc: "https://flagcdn.com/16x12/de.png"
                 }
             ];
-            $('#myDropdown').ddslick({
+            $('#languages').ddslick({
                 data:ddData,
                 width:150,
                 imagePosition:"right",
                 onSelected: function(selectedData){
                     //callback function: do something with selectedData;
+                   // alert('ali cakem')
                 }
             });
         </script>

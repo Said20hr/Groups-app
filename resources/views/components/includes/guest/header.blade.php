@@ -1,5 +1,5 @@
 <!--====== HEADER PART START ======-->
-<div class="navbar-area">
+<div class="navbar-area" >
         <div class="container relative">
             <div class="row">
                 <div class="w-full">
@@ -13,7 +13,7 @@
                             <span class="toggler-icon"></span>
                         </button>
 
-                        <div class="absolute left-0 right-0 z-20 hidden w-11/12 rounded-lg mx-auto duration-300 bg-white shadow lg:w-auto collapse navbar-collapse lg:block mt-2 top-100 mt-full lg:static lg:bg-transparent lg:shadow-none" id="navbarOne">
+                        <div class="absolute left-0 right-0 z-20 hidden lg:block w-11/12 rounded-lg mx-auto duration-300 bg-white shadow lg:w-auto collapse navbar-collapse  mt-2 top-100 mt-full lg:static lg:bg-transparent lg:shadow-none" id="navbarOne">
                             <ul id="nav" class="items-center lg:py-3 py-0 content-start mr-auto lg:justify-end navbar-nav lg:flex">
                                 <li class="nav-item active hover:bg-indigo-100 rounded-lg ">
                                     <a class="page-scroll" href="#home">{{__('Home')}}</a>
@@ -37,7 +37,7 @@
                                     <a class="text-red-500"  href="{{route('register')}}" rel="nofollow">{{ __('Join Now') }}</a>
                                 </li>
                                 <li class="nav-item float-end w-100 lg:flex hidden">
-                                    <div id="myDropdown"></div>
+                                    <div id="languages"></div>
                                 </li>
 
                                 @guest

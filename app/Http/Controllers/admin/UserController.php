@@ -53,10 +53,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        $user=User::find($id);
-        return view('admin.dashboard.users.view',compact('user'));
+         return view('admin.dashboard.users.view',compact('user'));
+
     }
 
     /**
@@ -91,6 +91,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
+
         if ($user->role->id != 1)
         {
             $user->delete();
